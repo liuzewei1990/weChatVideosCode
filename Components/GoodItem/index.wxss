@@ -1,0 +1,25 @@
+/* Components/GoodItem/index.wxss */
+
+.good-item{
+
+  padding: 11rpx;
+  background: #FFF;
+  /* border: 1rpx solid red; */
+
+}
+
+.header-img{
+  width: 312rpx;
+  height: 268rpx;
+  background: #EEE;
+}
+
+.title{
+  font-size: 28rpx;
+  padding: 10rpx 0;
+}
+
+.num{
+  font-size: 24rpx;
+}
+

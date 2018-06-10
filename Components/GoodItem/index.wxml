@@ -1,0 +1,11 @@
+<!--Components/GoodItem/index.wxml-->
+<view class='good-item'>
+  <view class='header-img'>
+    <image src='{{imgUrl}}'></image>
+  </view>
+  <view class='title'>{{title}}</view>
+  <view class='num'>
+    <text>{{num}}</text>
+    <text>次播放</text>
+  </view>
+</view>

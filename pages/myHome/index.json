@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "x-cell":"/Components/Cell/index"
+  }
+}

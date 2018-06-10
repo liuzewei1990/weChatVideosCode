@@ -1,0 +1,51 @@
+/* Components/Cell/index.wxss */
+
+.x-cell{
+  position: relative;
+  display: flex;
+  background-color: #FFF;
+  padding: 30rpx 20rpx;
+  font-size: 30rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.title{
+  flex: 1.2;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+
+.desc{
+  font-size: 24rpx;
+  color: #AAA;
+  flex: 0.8;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  text-align: right;
+}
+
+.link-icon{
+  width: 14rpx;
+  height: 24rpx;
+}
+
+.mr-l{
+  margin-right: 20rpx;
+}
+
+.border-line::after{
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0rpx;
+  left: 0rpx;
+  border-bottom:1rpx solid #eee;
+}
+
+.border-line-offset::after{
+  left: 20rpx;
+}

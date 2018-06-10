@@ -1,0 +1,11 @@
+<!--pages/myHome/index.wxml-->
+<view class='my-home'>
+  <view>Header</view>
+  <x-cell isLink="{{true}}" title="消息通知" borderLineOffset></x-cell>
+  <x-cell isLink="{{true}}" title="我的收藏" borderLineOffset></x-cell>
+  <x-cell isLink="{{true}}" title="购买会员" borderLineOffset></x-cell>
+  <x-cell isLink="{{true}}" title="购买历史" borderLineOffset></x-cell>
+  <x-cell isLink="{{true}}" title="分享"     borderLineOffset></x-cell>
+  <x-cell isLink="{{true}}" title="我的钱包" borderLineOffset></x-cell>
+  <x-cell isLink="{{true}}" title="退出登录" borderLineOffset></x-cell>
+</view>
