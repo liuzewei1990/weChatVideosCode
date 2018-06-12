@@ -1,0 +1,17 @@
+/* pages/payvip/index.wxss */
+
+
+.history-btn{
+  display: inline-block;
+  width: 126rpx;
+  height: 28rpx;
+  background-color: rgb(20, 138, 167);
+  color: #FFF;
+  font-size: 24rpx;
+  padding: 5rpx 10rpx;
+  border-radius: 28rpx;
+  text-align: center;
+  line-height: 28rpx;
+  float: right;
+  margin-right: 40rpx;
+}

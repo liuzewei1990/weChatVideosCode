@@ -1,3 +1,5 @@
+import assetsPath from "../../config/assetsPath.js";
+
 // pages/myHome/index.js
 Page({
 
@@ -5,7 +7,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    assetsPath,
+    msgNotice: { path: 'msgNotice' }
+  },
+
+  test:function(){
+    console.log(1)
+    
   },
 
   /**

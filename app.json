@@ -1,8 +1,15 @@
 {
   "pages": [
+    "pages/msgNotice/index",
     "pages/myHome/index",
+    "pages/logs/logs",
+    "pages/payvip/index",
+    "pages/myColle/index",
+    "pages/tradeVip/index",
+    "pages/tradeHistory/index",
+    "pages/myMoney/index",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/share/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

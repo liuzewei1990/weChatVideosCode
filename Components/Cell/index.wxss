@@ -8,7 +8,10 @@
   font-size: 30rpx;
   box-sizing: border-box;
   overflow: hidden;
+  align-items: center; 
 }
+
+
 
 .title{
   flex: 1.2;
@@ -18,13 +21,16 @@
 }
 
 .desc{
-  font-size: 24rpx;
+  font-size: 24rpx; 
   color: #AAA;
   flex: 0.8;
   overflow: hidden;
   white-space: nowrap;
   text-overflow:ellipsis;
   text-align: right;
+   /* display: table-cell;  */
+   /* line-height: 30rpx;  */
+  /* vertical-align:middle; */
 }
 
 .link-icon{

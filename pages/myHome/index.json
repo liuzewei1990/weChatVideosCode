@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "x-cell":"/Components/Cell/index"
+    "x-cell":"/Components/Cell/index",
+    "x-header":"/Components/Header/index"
   }
 }

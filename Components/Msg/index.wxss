@@ -1,0 +1,49 @@
+/* Components/Msg/index.wxss */
+
+.x-msg-item{
+  display: flex;
+  background: #FFF;
+  padding: 30rpx 20rpx;
+  align-items: center;
+}
+
+.header-img{
+  width: 114rpx;
+  height: 114rpx;
+  margin:0 10rpx;
+  border-radius: 50%; 
+  overflow: hidden;
+  background-size:100% 100%; 
+  margin-right: 40rpx; 
+}
+
+.header-info{
+  flex: 1;
+}
+
+.header-info .title{
+  font-size:30rpx;
+  margin-bottom:10rpx;
+}
+
+.header-info .title .name{
+  display: inline-block;
+  width:500rpx; 
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+
+.header-info .title .minW{
+  width:320rpx; 
+}
+
+.header-info .desc{
+  font-size:26rpx;
+  color: #666;
+}
+
+.header-arraw{
+  width: 20rpx;
+  height: 34rpx;
+}

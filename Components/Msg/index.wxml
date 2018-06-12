@@ -1,0 +1,17 @@
+<!--Components/Msg/index.wxml-->
+<view class='x-msg-item'>
+   <image class='header-img' src='{{assetsPath.msgIcon}}'></image> 
+  <!-- <view class='header-img' wx:if="{{headerUrl}}" style='background-image:url({{}});'></view> -->
+  <view class='header-info'>
+    <view class='title'>
+      <text class='name {{minW?"minW":""}}'>{{title}}</text>
+      <slot name="title"></slot>
+    </view>
+    <view class='desc'>
+      <text>{{desc}}</text>
+      <slot name="desc"></slot>
+    </view>
+  </view>
+  <image wx:if="{{isLink}}" class='header-arraw' src='{{assetsPath.arrawIcon}}'></image>
+</view>
+

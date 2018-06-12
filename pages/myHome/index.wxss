@@ -1,1 +1,16 @@
 /* pages/myHome/index.wxss */
+
+
+.icon{
+  margin-right: 20rpx;
+}
+
+.mai-btn{
+  display: inline-block;
+  background-color: rgb(20, 138, 167);
+  color: #FFF;
+  font-size: 24rpx;
+  padding: 10rpx 30rpx;
+  border-radius: 28rpx;
+  text-align: center;
+}

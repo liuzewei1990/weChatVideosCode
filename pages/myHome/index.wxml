@@ -1,11 +1,40 @@
 <!--pages/myHome/index.wxml-->
 <view class='my-home'>
-  <view>Header</view>
-  <x-cell isLink="{{true}}" title="消息通知" borderLineOffset></x-cell>
-  <x-cell isLink="{{true}}" title="我的收藏" borderLineOffset></x-cell>
-  <x-cell isLink="{{true}}" title="购买会员" borderLineOffset></x-cell>
-  <x-cell isLink="{{true}}" title="购买历史" borderLineOffset></x-cell>
-  <x-cell isLink="{{true}}" title="分享"     borderLineOffset></x-cell>
-  <x-cell isLink="{{true}}" title="我的钱包" borderLineOffset></x-cell>
-  <x-cell isLink="{{true}}" title="退出登录" borderLineOffset></x-cell>
+
+  <view class='martop20'></view>
+  
+  <x-header isLink headerUrl="http://img0.imgtn.bdimg.com/it/u=489423423,2450269323&fm=27&gp=0.jpg" title="手中的余温在泛滥手中的余温在泛滥手中的余温在泛滥1">
+    <view slot="desc" class='mai-btn'>VIP会员</view>
+  </x-header>
+
+  <view class='martop20'></view>
+  
+  <x-cell isLink title="消息通知" borderLineOffset to="../msgNotice/index">
+    <image class='icon' src='{{assetsPath.msgIcon}}' slot="icon" style='width:26rpx;height:32rpx;'></image>
+  </x-cell>
+
+  <x-cell isLink title="我的收藏" borderLineOffset to="../myColle/index">
+    <image class='icon' src='{{assetsPath.xingIcon}}' slot="icon" style='width:28rpx;height:26rpx;'></image>
+  </x-cell>
+
+  <x-cell isLink title="购买会员" borderLineOffset to="../tradeVip/index">
+    <image class='icon' src='{{assetsPath.vipIcon}}' slot="icon" style='width:26rpx;height:24rpx;'></image>
+  </x-cell>
+
+  <x-cell isLink title="购买历史" borderLineOffset to="../tradeHistory/index">
+    <image class='icon' src='{{assetsPath.historyIcon}}' slot="icon" style='width:28rpx;height:28rpx;'></image>
+  </x-cell>
+
+  <x-cell isLink title="分享"     borderLineOffset to="../share/index">
+    <image class='icon' src='{{assetsPath.shareIcon}}' slot="icon" style='width:28rpx;height:22rpx;'></image>
+  </x-cell>
+
+  <x-cell isLink title="我的钱包" borderLineOffset to="../myMoney/index">
+    <image class='icon' src='{{assetsPath.moneyIcon}}' slot="icon" style='width:24rpx;height:28rpx;'></image>
+  </x-cell>
+
+  <x-cell isLink title="退出登录" borderLineOffsetc>
+    <image class='icon' src='{{assetsPath.exitIcon}}' slot="icon" style='width:28rpx;height:30rpx;'></image>
+  </x-cell>
+
 </view>

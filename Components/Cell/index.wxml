@@ -1,8 +1,8 @@
 <!--Components/Cell/index.wxml-->
-<view class='x-cell {{borderLine?"border-line":""}} {{borderLineOffset?"border-line border-line-offset":""}}'>
+<view class='x-cell {{borderLine?"border-line":""}} {{borderLineOffset?"border-line border-line-offset":""}}' bind:tap="toUrl">
+  <slot name="icon"></slot>
   <view class='title'>{{title}}</view>
   <view class='desc {{isLink?"mr-l":""}}'>{{desc}}</view>
-  <view class='link-icon' wx:if="{{isLink}}">
-    <image class='link-icon' src='/images/@2x/fanhuixiayiye@2x.png'></image>
-  </view>
+  <slot name="desc"></slot>
+  <image wx:if="{{isLink}}" class='link-icon' src='{{arrawIcon}}'></image>
 </view>

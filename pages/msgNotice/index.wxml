@@ -1,0 +1,2 @@
+<!--pages/share/index.wxml-->
+<x-msg title="系统消息" desc="您的会员快到期了哦"></x-msg>

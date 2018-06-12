@@ -1,0 +1,5 @@
+<!--pages/payvip/index.wxml-->
+<view class='martop20'></view>
+<x-header minW title="手中的余温在泛滥手中的余温在泛滥手中的余温在泛滥1" desc="2018-04-13到期">
+  <view slot="title" class='history-btn'>购买历史</view>
+</x-header>
