@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarTitleText": "购买历史",
+  "usingComponents": {
+    "x-Gooditem": "/Components/GoodItem/index"
+  }
+}

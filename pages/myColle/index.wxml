@@ -1,2 +1,33 @@
 <!--pages/share/index.wxml-->
-<text>pages/share/index.wxml</text>
+<view class='list'>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+  <x-Gooditem imgUrl="/images/@2x/header.jpeg" title="九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班九型人格亲子特训班" num="300" class="martop20"></x-Gooditem>
+</view>

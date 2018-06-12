@@ -1,0 +1,11 @@
+/* pages/userInfo/index.wxss */
+
+.user-header{
+  width: 100rpx;
+  height: 100rpx;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 30rpx;
+}

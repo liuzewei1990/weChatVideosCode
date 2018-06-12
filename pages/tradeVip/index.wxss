@@ -1,1 +1,24 @@
 /* pages/share/index.wxss */
+
+
+
+.trade-history-btn{
+  display: inline-block;
+  background-color: rgb(20, 138, 167);
+  color: #FFF;
+  font-size: 24rpx;
+  padding: 2rpx 20rpx;
+  border-radius: 28rpx;
+  text-align: center;
+}
+
+.select{
+  background-color: #FFF;
+  padding:10rpx 20rpx 40rpx;
+  box-sizing: border-box;
+}
+
+.trade-btn{
+  background-color: rgb(20, 138, 167);
+  color: #FFF;
+}

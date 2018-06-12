@@ -11,5 +11,6 @@ export default  {
   vipIcon: "/images/@2x/goumaihuiyuan@3x.png",
   xingIcon: "/images/@2x/wodeshoucang@3x.png",
   noticeIcon: "/images/@2x/xitongtongzhi@3x.png",
+  txIcon: "/images/@2x/tixian@3x.png",
   msgIcon: "/images/@2x/xiaoxitongzhi@3x.png"
 }

@@ -1,11 +1,13 @@
 // pages/share/index.js
+
+import assetsPath from "../../config/assetsPath.js";
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    assetsPath
   },
 
   /**

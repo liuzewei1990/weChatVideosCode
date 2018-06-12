@@ -1,5 +1,5 @@
 <!--Components/Header-1/index.wxml-->
-<view class='x-header'>
+<view class='x-header' bind:tap="toUrl">
   <!-- <image class='header-img' src='{{assetsPath.headerIcon}}'></image> -->
   <view class='header-img' wx:if="{{headerUrl}}" style='background-image:url({{headerUrl}});'></view>
   <view class='header-info'>

@@ -1,35 +1,13 @@
-import assetsPath from "../../config/assetsPath.js";
+// pages/userInfo/index.js
 
-// pages/myHome/index.js
+import assetsPath from "../../config/assetsPath.js";
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    assetsPath,
-    msgNotice: { path: 'msgNotice' }
-  },
-
-  test:function(){
-    console.log(1)
-    
-  },
-
-  share:function(){
-    wx.showToast({
-      title: '分享成功',
-      icon: 'success',
-      duration: 2000
-    })
-  },
-
-  exit: function () {
-    wx.showToast({
-      title: '退出成功',
-      icon: 'success',
-      duration: 2000
-    })
+    assetsPath
   },
 
   /**

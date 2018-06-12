@@ -1,2 +1,11 @@
 <!--pages/share/index.wxml-->
-<text>pages/share/index.wxml</text>
+<view class='martop20'></view>
+<x-header isLink headerUrl="http://img0.imgtn.bdimg.com/it/u=489423423,2450269323&fm=27&gp=0.jpg" minW title="手中的余温在泛滥手中的余温在泛滥手中的余温在泛滥">
+  <view slot="title" class='trade-history-btn'>购买历史</view>
+  <view slot="desc">2018-04-13 到期</view>
+</x-header>
+<view class='martop20'></view>
+<view class='select'>
+  <view>1个月</view>
+  <button class='trade-btn' size="default" loading="{{false}}" hover-class="other-button-hover"> 立即购买 </button>
+</view>

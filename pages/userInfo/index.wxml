@@ -1,0 +1,6 @@
+<!--pages/userInfo/index.wxml-->
+<view class='martop20'></view>
+<x-cell title="头像" isLink borderLine>
+  <view slot="desc" class='user-header' style="background-image:url({{assetsPath.headerIcon}});"></view>
+</x-cell>
+<x-cell title="昵称" desc="手中的余温在泛滥" isLink></x-cell>

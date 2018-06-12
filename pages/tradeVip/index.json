@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarTitleText": "购买会员",
+  "usingComponents": {
+    "x-header": "/Components/Header/index"
+  }
+}

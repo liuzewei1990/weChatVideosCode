@@ -24,6 +24,8 @@
 .header-info .title{
   font-size:30rpx;
   margin-bottom:10rpx;
+  display: flex;
+  align-items: center;
 }
 
 .header-info .title .name{

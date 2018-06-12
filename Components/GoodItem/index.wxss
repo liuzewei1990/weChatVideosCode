@@ -1,11 +1,12 @@
 /* Components/GoodItem/index.wxss */
 
 .good-item{
-
+  display: inline-block;
   padding: 11rpx;
   background: #FFF;
-  /* border: 1rpx solid red; */
-
+  width: 334rpx;
+  box-sizing: border-box;
+  border-radius: 5rpx;
 }
 
 .header-img{
@@ -14,12 +15,22 @@
   background: #EEE;
 }
 
+.header-img image{
+  width: 100%;
+  height: 100%;
+}
+
 .title{
   font-size: 28rpx;
-  padding: 10rpx 0;
+  padding: 10rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
 }
 
 .num{
   font-size: 24rpx;
+  padding: 10rpx;
+  color: #666;
 }
 

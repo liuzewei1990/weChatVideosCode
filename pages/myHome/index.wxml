@@ -3,7 +3,7 @@
 
   <view class='martop20'></view>
   
-  <x-header isLink headerUrl="http://img0.imgtn.bdimg.com/it/u=489423423,2450269323&fm=27&gp=0.jpg" title="手中的余温在泛滥手中的余温在泛滥手中的余温在泛滥1">
+  <x-header isLink headerUrl="http://img0.imgtn.bdimg.com/it/u=489423423,2450269323&fm=27&gp=0.jpg" title="手中的余温在泛滥手中的余温在泛滥手中的余温在泛滥1" to="../userInfo/index">
     <view slot="desc" class='mai-btn'>VIP会员</view>
   </x-header>
 
@@ -25,7 +25,7 @@
     <image class='icon' src='{{assetsPath.historyIcon}}' slot="icon" style='width:28rpx;height:28rpx;'></image>
   </x-cell>
 
-  <x-cell isLink title="分享"     borderLineOffset to="../share/index">
+  <x-cell isLink title="分享"     borderLineOffset bind:tap="share">
     <image class='icon' src='{{assetsPath.shareIcon}}' slot="icon" style='width:28rpx;height:22rpx;'></image>
   </x-cell>
 
@@ -33,7 +33,7 @@
     <image class='icon' src='{{assetsPath.moneyIcon}}' slot="icon" style='width:24rpx;height:28rpx;'></image>
   </x-cell>
 
-  <x-cell isLink title="退出登录" borderLineOffsetc>
+  <x-cell isLink title="退出登录" borderLineOffsetc bind:tap="exit">
     <image class='icon' src='{{assetsPath.exitIcon}}' slot="icon" style='width:28rpx;height:30rpx;'></image>
   </x-cell>
 
