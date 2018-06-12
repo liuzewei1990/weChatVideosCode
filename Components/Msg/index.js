@@ -14,7 +14,9 @@ Component({
     isLink: Boolean,
     minW: Boolean,
     title: String,
-    desc: String
+    desc: String,
+    time:String,
+    borderLine:Boolean
   },
 
   /**

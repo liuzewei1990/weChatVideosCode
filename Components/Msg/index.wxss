@@ -1,15 +1,18 @@
 /* Components/Msg/index.wxss */
 
 .x-msg-item{
-  display: flex;
   background: #FFF;
-  padding: 30rpx 20rpx;
+  padding:20rpx;
+}
+
+.box{
+  display: flex;
   align-items: center;
 }
 
 .header-img{
-  width: 114rpx;
-  height: 114rpx;
+  width: 50rpx;
+  height: 50rpx;
   margin:0 10rpx;
   border-radius: 50%; 
   overflow: hidden;
@@ -23,7 +26,7 @@
 
 .header-info .title{
   font-size:30rpx;
-  margin-bottom:10rpx;
+  /* margin-bottom:30rpx; */
 }
 
 .header-info .title .name{
@@ -38,12 +41,20 @@
   width:320rpx; 
 }
 
-.header-info .desc{
+.desc{
   font-size:26rpx;
   color: #666;
+}
+
+.time{
+  text-align: right;
 }
 
 .header-arraw{
   width: 20rpx;
   height: 34rpx;
+}
+
+.border-line{
+  border-bottom:1px solid #eee;
 }
