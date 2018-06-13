@@ -13,5 +13,6 @@ export default  {
   xingIcon: `${assetsPath}/wodeshoucang@3x.png`,
   noticeIcon: `${assetsPath}/xitongtongzhi@3x.png`,
   txIcon: `${assetsPath}/tixian@3x.png`,
+  alipayIcon: `${assetsPath}/zhifubaotubiao@3x.png`,
   msgIcon: `${assetsPath}/xiaoxitongzhi@3x.png`
 }

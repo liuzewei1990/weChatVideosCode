@@ -1,0 +1,17 @@
+<!--pages/exportMoney/index.wxml-->
+<view class='martop20'></view>
+
+<x-cell title="张三" >
+  <text slot="desc" class='bind-alipay'>编辑</text>
+  <image slot="icon" src='{{assetsPath.alipayIcon}}'style="width:54rpx; height:54rpx; margin-right:20rpx;"></image>
+</x-cell>
+
+<view class='martop20'></view>
+
+<x-cell title="可用余额" borderLine >
+  <text slot="desc" class='bind-alipay'>500(元)</text>
+</x-cell>
+
+<x-cell title="金额（元）" ></x-cell>
+
+<button class='trade-btn' size="default" loading="{{false}}" hover-class="other-button-hover"> 立即提现 </button> 

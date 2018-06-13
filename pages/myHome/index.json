@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "个人中心",
   "usingComponents": {
     "x-cell":"/Components/Cell/index",
     "x-header":"/Components/Header/index"

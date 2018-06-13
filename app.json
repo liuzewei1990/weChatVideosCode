@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/myHome/index",
+    "pages/exportMoney/index",
     "pages/tradeVip/index",
     "pages/userInfo/index",
     "pages/myMoney/index",
