@@ -1,0 +1,37 @@
+/* Components/Radiovip/index.wxss */
+
+.x-radiovip{
+  display: inline-block;
+  width: 190rpx;
+  height: 168rpx;
+  border-radius: 20rpx;
+  border: 1rpx solid #eee;
+  text-align: center;
+  margin: 20rpx 20rpx 0;
+  background: #FFF;
+  
+}
+
+.month{
+  font-size: 26rpx;
+  margin-top: 20rpx;
+}
+
+.monery{
+  color: #df0000;
+  font-size: 38rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-left: -10rpx;
+  line-height: 50rpx;
+}
+
+.desc{
+  font-size: 22rpx;
+  color: #999;
+  /* margin-top: 15rpx; */
+}
+
+.checked{
+  background:#eee;
+  border:1rpx solid #ccc;
+}

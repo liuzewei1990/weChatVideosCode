@@ -18,7 +18,21 @@
   box-sizing: border-box;
 }
 
+.radios{
+  /* display: inline-block; */
+    display: flex;  
+    flex-wrap:wrap;  
+   /* justify-content: flex-start; */
+   /* align-content: flex-start;  */
+      /* align-content:center;   */
+}
+
+.item{
+  margin:20rpx;
+}
+
 .trade-btn{
   background-color: rgb(20, 138, 167);
   color: #FFF;
+  margin-top: 30rpx;
 }

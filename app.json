@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/myHome/index",
-    "pages/userInfo/index",
     "pages/tradeVip/index",
+    "pages/userInfo/index",
     "pages/myMoney/index",
     "pages/tradeHistory/index",
     "pages/myColle/index",

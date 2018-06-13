@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "购买会员",
   "usingComponents": {
-    "x-header": "/Components/Header/index"
+    "x-header": "/Components/Header/index",
+    "x-radiovip": "/Components/Radiovip/index"
   }
 }

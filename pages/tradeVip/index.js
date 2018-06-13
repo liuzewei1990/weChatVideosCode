@@ -5,7 +5,30 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    checked:{},
+    radioList:[
+      {
+        month:"1",
+        monery: "25",
+        desc:"22.0",
+      },
+      {
+        month: "2",
+        monery: "25",
+        desc: "22.0",
+      },
+      {
+        month: "3",
+        monery: "25",
+        desc: "22.0",
+      },
+      {
+        month: "4",
+        monery: "25",
+        desc: "22.0",
+      }
+      
+    ]
   },
 
   /**
@@ -62,5 +85,43 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  /**
+   * 用户点击购买历史
+   */
+  toHostory:function(){
+    wx.navigateTo({
+      url: "../tradeHistory/index",
+      success: () => { },
+      fail: () => {
+        wx.showToast({
+          title: '网络异常，请重试！',
+          icon: 'none',
+          duration: 2000
+        })
+      }
+    })
+  },
+
+  tradeBtn:function(){
+    wx.showModal({
+      title: '提示',
+      content: '选择了' + this.data.checked.month + "个月",
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
+
+  onChecked:function(item){
+    console.log(item.detail)
+    this.setData({
+      checked:item.detail
+    })
   }
 })
