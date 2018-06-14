@@ -1,0 +1,16 @@
+<!--Componen
+.title-right
+
+ts/Pannel/index.wxml-->
+<view class='x-pannel'>
+<view class='title'>
+<text class='title-left'>提现到支付宝</text>
+<text class='title-right red'>{{money}}</text>
+</view>
+<view class='order-no'>订单编号：{{orderNo}}</view>
+<view>
+<text class='order-no'>支付宝号：{{alipayNo}}</text>
+<text class='title-right order-no'>{{date}}</text>
+</view>
+
+</view>

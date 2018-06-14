@@ -63,7 +63,22 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  toUrl() {
+    wx.navigateTo({
+      url: "../userMoneyExportHistory/index",
+      success: () => { },
+      fail: () => {
+        wx.showToast({
+          title: '网络异常，请重试！',
+          icon: 'none',
+          duration: 2000
+        })
+      }
+    })
   }
+
 
   
 })

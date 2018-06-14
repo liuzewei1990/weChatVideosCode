@@ -1,11 +1,13 @@
-// pages/payvip/index.js
+// pages/share/index.js
+
+import assetsPath from "../../config/assetsPath.js";
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    assetsPath
   },
 
   /**
@@ -62,5 +64,19 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  toUrl(){
+    wx.navigateTo({
+      url: "../userMoneyExportHistory/index",
+      success: () => { },
+      fail: () => {
+        wx.showToast({
+          title: '网络异常，请重试！',
+          icon: 'none',
+          duration: 2000
+        })
+      }
+    })
   }
 })

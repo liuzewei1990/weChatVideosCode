@@ -1,7 +1,7 @@
 <!--pages/exportMoney/index.wxml-->
 <view class='martop20'></view>
 
-<x-cell title="张三" >
+<x-cell title="张三" to="../userMoneyBindAlipay/index">
   <text slot="desc" class='bind-alipay'>编辑</text>
   <image slot="icon" src='{{assetsPath.alipayIcon}}'style="width:54rpx; height:54rpx; margin-right:20rpx;"></image>
 </x-cell>
@@ -12,6 +12,9 @@
   <text slot="desc" class='bind-alipay'>500(元)</text>
 </x-cell>
 
-<x-cell title="金额（元）" ></x-cell>
+<x-cell title="金额（元）" >
+  <input class='' type='digit' style='text-align:right; margin-right:20rpx;' slot="desc" maxlength="100" placeholder="请输入提现金额" />
+</x-cell>
 
-<button class='trade-btn' size="default" loading="{{false}}" hover-class="other-button-hover"> 立即提现 </button> 
+
+<button class='x-btn' size="default" loading="{{false}}" hover-class="other-button-hover" bind:tap="toUrl"> 立即提现 </button> 

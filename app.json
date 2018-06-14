@@ -1,17 +1,17 @@
 {
   "pages": [
-    "pages/myHome/index",
-    "pages/exportMoney/index",
-    "pages/tradeVip/index",
-    "pages/userInfo/index",
-    "pages/myMoney/index",
-    "pages/tradeHistory/index",
-    "pages/myColle/index",
-    "pages/msgNotice/index",
+    "pages/userHome/index",
+    "pages/userMoneyExportHistory/index",
+    "pages/userHistory/index",
+    "pages/userMoney/index",
+    "pages/userMoneyBindAlipay/index",
+    "pages/userColle/index",
+    "pages/userMoneyExport/index",
+    "pages/userVip/index",
+    "pages/userHomeCenter/index",
+    "pages/userNotice/index",
     "pages/logs/logs",
-    "pages/payvip/index",
-    "pages/index/index",
-    "pages/share/index"
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,7 +26,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/myHome/index",
+        "pagePath": "pages/userHome/index",
         "text": "我的"
       }
     ]

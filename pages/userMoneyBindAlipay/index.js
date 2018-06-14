@@ -1,13 +1,11 @@
-// pages/share/index.js
-
-import assetsPath from "../../config/assetsPath.js";
+// pages/userMoneyBindAlipay/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    assetsPath
+  
   },
 
   /**

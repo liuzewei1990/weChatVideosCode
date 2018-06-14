@@ -1,0 +1,13 @@
+<!--pages/share/index.wxml-->
+
+<view class='martop20'></view>
+
+<x-moneyCard money="0.00">
+  <view style='float:right;padding:10rpx 30rpx;' bind:tap="toUrl">交易记录</view>
+</x-moneyCard>
+
+<view class='martop20'></view>
+
+<x-cell title="提现" isLink to="../userMoneyExport/index">
+  <image class='icon' src='{{assetsPath.txIcon}}' slot="icon" style='width:32rpx;height:32rpx;margin-right:30rpx;'></image>
+</x-cell>

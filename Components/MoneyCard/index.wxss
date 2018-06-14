@@ -1,0 +1,25 @@
+/* Components/MoneyCard/index.wxss */
+
+.x-moneyCard{
+  background-color: #FFF;
+  padding: 20rpx;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  font-size: 30rpx;
+
+}
+
+.text{
+  font-size: 28rpx;
+  color: #888;
+  margin-left:20rpx;
+  margin-top: 70rpx;
+}
+
+.money{
+  font-size: 72rpx;
+  color: #000;
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+}

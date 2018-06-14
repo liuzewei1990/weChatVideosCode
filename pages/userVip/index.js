@@ -92,7 +92,7 @@ Page({
    */
   toHostory:function(){
     wx.navigateTo({
-      url: "../tradeHistory/index",
+      url: "../userHistory/index",
       success: () => { },
       fail: () => {
         wx.showToast({

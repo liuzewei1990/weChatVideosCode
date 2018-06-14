@@ -1,0 +1,9 @@
+<!--pages/userMoneyBindAlipay/index.wxml-->
+<view class='martop20'></view>
+<x-cell title="姓名" borderLine>
+  <input slot="desc" placeholder='请输入姓名' style='text-align:right; margin-right:20rpx;'></input>
+</x-cell>
+<x-cell title="账号">
+  <input slot="desc" placeholder='请输入账号' style='text-align:right; margin-right:20rpx;'></input>
+</x-cell>
+<button class='x-btn' size="default" loading="{{false}}" hover-class="other-button-hover"> 立即绑定 </button> 

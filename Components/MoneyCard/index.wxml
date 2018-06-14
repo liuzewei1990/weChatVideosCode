@@ -1,0 +1,6 @@
+<!--Components/MoneyCard/index.wxml-->
+<view class='x-moneyCard'>
+  <slot></slot>
+  <view class='text'>我的余额（元）</view>
+  <view class='money'>{{money}}</view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的钱包",
+  "usingComponents": {
+    "x-cell": "/Components/Cell/index",
+    "x-moneyCard": "/Components/MoneyCard/index"
+  }
+}

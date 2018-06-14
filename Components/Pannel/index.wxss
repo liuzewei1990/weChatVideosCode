@@ -1,0 +1,26 @@
+/* Components/Pannel/index.wxss */
+.x-pannel{
+  background: #fff;
+  padding: 15rpx 20rpx;
+}
+.title{
+  font-size: 30rpx;
+
+}
+.title-left{
+/* float: left */
+color: #000;
+margin-bottom: 20rpx;
+display: inline-block
+
+}
+.title-right{
+  float: right
+}
+.red{
+  color: #f70000;
+}
+.order-no{
+  font-size: 24rpx;
+  color: #666;
+}

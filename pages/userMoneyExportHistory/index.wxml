@@ -1,0 +1,18 @@
+<!--pages/moneyDetailed/index.wxml-->
+<view
+  wx:for="{{list}}"
+  wx:key="index"
+  wx:item="item"
+  class='martop20'
+>
+ <x-pannel
+  money='{{item.money}}' 
+  orderNo="{{item.orderNo}}" 
+  alipayNo="{{item.alipayNo}}" 
+  date="{{item.date}}"
+  ></x-pannel> 
+</view>
+
+
+
+

@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "我的钱包",
+  "navigationBarTitleText": "绑定支付宝",
   "usingComponents": {
     "x-cell": "/Components/Cell/index"
   }

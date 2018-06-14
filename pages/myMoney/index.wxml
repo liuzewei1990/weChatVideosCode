@@ -1,6 +1,0 @@
-<!--pages/share/index.wxml-->
-
-<view class='martop20'></view>
-<x-cell title="提现" isLink to="../exportMoney/index">
-  <image class='icon' src='{{assetsPath.txIcon}}' slot="icon" style='width:32rpx;height:32rpx;margin-right:30rpx;'></image>
-</x-cell>

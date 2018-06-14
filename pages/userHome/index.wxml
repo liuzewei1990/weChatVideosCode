@@ -3,25 +3,25 @@
 
   <view class='martop20'></view>
   
-  <x-header isLink headerUrl="http://img0.imgtn.bdimg.com/it/u=489423423,2450269323&fm=27&gp=0.jpg" title="手中的余温在泛滥手中的余温在泛滥手中的余温在泛滥1" to="../userInfo/index">
+  <x-header isLink headerUrl="http://img0.imgtn.bdimg.com/it/u=489423423,2450269323&fm=27&gp=0.jpg" title="手中的余温在泛滥手中的余温在泛滥手中的余温在泛滥1" to="../userHomeCenter/index">
     <view slot="desc" class='mai-btn'>VIP会员</view>
   </x-header>
 
   <view class='martop20'></view>
   
-  <x-cell isLink title="消息通知" borderLineOffset to="../msgNotice/index">
+  <x-cell isLink title="消息通知" borderLineOffset to="../userNotice/index">
     <image class='icon' src='{{assetsPath.msgIcon}}' slot="icon" style='width:26rpx;height:32rpx;'></image>
   </x-cell>
 
-  <x-cell isLink title="我的收藏" borderLineOffset to="../myColle/index">
+  <x-cell isLink title="我的收藏" borderLineOffset to="../userColle/index">
     <image class='icon' src='{{assetsPath.xingIcon}}' slot="icon" style='width:28rpx;height:26rpx;'></image>
   </x-cell>
 
-  <x-cell isLink title="购买会员" borderLineOffset to="../tradeVip/index">
+  <x-cell isLink title="购买会员" borderLineOffset to="../userVip/index">
     <image class='icon' src='{{assetsPath.vipIcon}}' slot="icon" style='width:26rpx;height:24rpx;'></image>
   </x-cell>
 
-  <x-cell isLink title="购买历史" borderLineOffset to="../tradeHistory/index">
+  <x-cell isLink title="购买历史" borderLineOffset to="../userHistory/index">
     <image class='icon' src='{{assetsPath.historyIcon}}' slot="icon" style='width:28rpx;height:28rpx;'></image>
   </x-cell>
 
@@ -29,7 +29,7 @@
     <image class='icon' src='{{assetsPath.shareIcon}}' slot="icon" style='width:28rpx;height:22rpx;'></image>
   </x-cell>
 
-  <x-cell isLink title="我的钱包" borderLineOffset to="../myMoney/index">
+  <x-cell isLink title="我的钱包" borderLineOffset to="../userMoney/index">
     <image class='icon' src='{{assetsPath.moneyIcon}}' slot="icon" style='width:24rpx;height:28rpx;'></image>
   </x-cell>
 
