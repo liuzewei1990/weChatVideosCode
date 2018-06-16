@@ -1,5 +1,5 @@
 <!--Components/GoodItem/index.wxml-->
-<view class='good-item'>
+<view class='good-item' bind:tap="toUrl">
   <view class='header-img'>
     <image src='{{imgUrl}}'></image>
   </view>

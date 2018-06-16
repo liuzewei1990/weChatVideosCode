@@ -1,12 +1,17 @@
-// Components/GoodItem/index.js
+// Components/GoodCell/index.js
+
+import assetsPath from "../../config/assetsPath.js";
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    imgUrl: String,
-    title: String,
-    num: String,
+    borderLine:Boolean,
+    reverse:Boolean,
+    videoUrl:String,
+    title:String,
+    num:String,
+    date:String,
     to:String
   },
 
@@ -14,7 +19,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    assetsPath
   },
 
   /**
@@ -36,5 +41,6 @@ Component({
         }
       })
     }
+
   }
 })

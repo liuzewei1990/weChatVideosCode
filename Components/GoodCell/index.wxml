@@ -1,0 +1,13 @@
+<!--Components/GoodCell/index.wxml-->
+<view class='x-goodCell {{reverse?"reverse":""}} {{borderLine?"border-line":""}}' bind:tap="toUrl">
+  <view class='video-box' style="background-image:url({{videoUrl}});">
+    <image class='play' src='{{assetsPath.playIcon}}'></image>
+  </view>
+  <view class='detail-box'>
+    <view class='title {{title?"":"title-loading"}}'>{{title}}</view>
+    <view class='desc' wx:if="{{date}}">
+      <text class='num'>{{num}}次播放</text>
+      <text class='date'>{{date}}</text>
+    </view>
+  </view>
+</view>

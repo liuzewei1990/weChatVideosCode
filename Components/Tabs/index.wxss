@@ -1,0 +1,49 @@
+/* Components/Tabs/index.wxss */
+
+
+.x-tabs{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;  
+  text-align: center;
+  background: #FFF;
+  min-height: 80rpx;
+}
+
+.x-tabs .name{
+  font-size: 30rpx;
+  /* flex: 1; */
+  padding:20rpx 10rpx; 
+  box-sizing: border-box;
+  /*超出 省略号...  */
+  width:280rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+
+.layout-loading{
+  background-color: #eee;
+  display: inline-block;
+  min-width:50rpx;
+  min-height:30rpx;
+}
+
+.x-tabs-scroll{
+  display: flex; 
+  flex-wrap: nowrap; 
+  text-align: center; 
+  white-space: nowrap;
+}
+
+.x-tabs-scroll .name{
+  font-size: 30rpx;
+  background: #FFF;
+  padding:20rpx 32rpx; 
+  box-sizing: border-box;
+}
+
+.checked{
+  color: #017a97;
+  border-bottom:1rpx solid #017a97;
+}

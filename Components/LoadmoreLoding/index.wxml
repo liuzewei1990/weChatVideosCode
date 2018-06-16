@@ -1,0 +1,14 @@
+<!--Components/LoadmoreLoding/index.wxml-->
+
+<!--status: init | loading | error | notData  -->
+
+<view class="weui-loadmore" hidden="{{status=='init'}}" >
+    <view class="weui-loading" wx:if="{{status=='loading'}}"></view>
+    <view class="weui-loadmore__tips" wx:if="{{status=='loading'}}">正在加载</view>
+
+    <view class="weui-loadmore__tips" wx:if="{{status=='error'}}" bind:tap="handleErorrTap">网络异常，点我重试！</view>
+
+    <view class="weui-loadmore__tips" wx:if="{{status=='notData'}}">没有更多了！</view>
+
+    <view class="weui-loadmore__tips" wx:if="{{status=='null'}}">暂无数据！</view>
+</view>

@@ -1,5 +1,29 @@
 <!--index.wxml-->
-<view class="">
-  <x-cell title="我是标题" isLink></x-cell>
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+  <block wx:for="{{banners}}">
+    <swiper-item>
+      <image src="{{item.image}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
 
+<view class='tabs'>
+  <x-Tabs class='{{tabsFixed?"fixed":""}}' list="{{categorys}}" checkedindex="{{defaultIndex}}" isScroll="{{categorys.length > 6}}" bind:checked="handleChecked"></x-Tabs>
 </view>
+
+<!-- <scroll-view scroll-y style="height:{{second_height}}px" id="mjltest"> -->
+
+  <x-goodCell
+    wx:for="{{products}}"
+    wx:key="index"
+    wx:item="item"
+    borderLine="true"
+    videoUrl="{{item.productImage}}"
+    title="{{item.productName}}"
+    num="{{item.playCounts}}"
+    date="{{item.uploadTime}}"
+    to="/pages/play/index?id={{item.id}}"
+  ></x-goodCell>
+<x-loadmoreLoding status="{{status}}" bind:tapError="onTapError"></x-loadmoreLoding>
+<!-- </scroll-view> -->

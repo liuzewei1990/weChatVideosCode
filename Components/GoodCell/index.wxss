@@ -1,0 +1,70 @@
+/* Components/GoodCell/index.wxss */
+
+.x-goodCell{
+  background-color: #fff;
+  padding: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+.reverse{
+  flex-direction: row-reverse;
+}
+
+.border-line{
+  border-bottom: 1px solid #eee;
+}
+
+.video-box{
+  position: relative;
+  width: 250rpx;
+  height: 160rpx;
+  background-color: #eee;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.video-box .play{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 56rpx;
+  height: 40rpx;
+  margin-left: -28rpx;
+  margin-top: -20rpx;
+}
+
+.detail-box{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+
+.title{
+  font-size: 32rpx;
+  flex: 1;
+
+}
+
+.title-loading{
+  display: inline-block;
+  min-width: 200px;
+  min-height: 40rpx;
+  background:#eee; 
+}
+
+.desc{
+  font-size: 26rpx;
+  color: #666666;
+  display: flex;
+}
+
+.num{
+  flex: 0.9;
+}

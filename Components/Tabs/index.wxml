@@ -1,0 +1,18 @@
+<!--Components/Tabs/index.wxml-->
+<scroll-view scroll-x>
+  <view class='{{isScroll?"x-tabs-scroll":"x-tabs"}}'>
+    <view class='name {{checkedindex == index ? "checked" : ""}}' 
+        wx:for="{{list}}" 
+        wx:key="index" 
+        wx:for-index="index" 
+        wx:for-item="item" 
+        data-item="{{item}}" 
+        data-checkedindex="{{index}}" 
+        bind:tap="handleChecked">
+        
+    <text class='{{item.categoryName?"":"layout-loading"}}'>{{item.categoryName}}</text>
+
+    </view>
+  </view>
+</scroll-view>
+

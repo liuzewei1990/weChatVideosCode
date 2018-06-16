@@ -67,7 +67,7 @@ Page({
 
   toUrl() {
     wx.navigateTo({
-      url: "../userMoneyExportHistory/index",
+      url: "../userMoneyExportHistory/index",                                   
       success: () => { },
       fail: () => {
         wx.showToast({

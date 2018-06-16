@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "x-goodCell": "/Components/GoodCell/index",
+    "x-cell": "/Components/Cell/index"
+  }
+}

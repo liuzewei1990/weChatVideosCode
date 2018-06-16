@@ -1,0 +1,20 @@
+<!--pages/login/index.wxml-->
+<view class='logo'>
+  <image src=''></image>
+</view>
+
+<view class='wrap'>
+  <view class='input-row'>
+    <image src='{{assetsPath.phoneIcon}}' style='width:20rpx; height:32rpx; margin:0 20rpx;'></image>
+    <view class='phone'>手机号：</view>
+    <input type='tel' placeholder='请输入手机号'></input>
+  </view>
+  <view class='input-row'>
+    <image src='{{assetsPath.verifyIcon}}' style='width:24rpx; height:26rpx; margin:0 20rpx;'></image>
+    <view class='code'>验证码：</view>
+    <input type='tel' placeholder='请输入验证码' style='flex:0.7;'></input>
+    <button size="default" class='send-code' loading="{{false}}" hover-class="other-button-hover" bind:tap="sendCode"> 发送验证码 </button> 
+  </view>
+</view>
+
+<button class='x-btn' size="default" loading="{{false}}" hover-class="other-button-hover" bind:tap="tradeBtn"> 登录 </button> 

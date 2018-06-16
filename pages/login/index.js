@@ -1,6 +1,7 @@
-// pages/share/index.js
+// pages/login/index.js
 
 import assetsPath from "../../config/assetsPath.js";
+import { getLoginCode } from "../../apis/index.js";
 Page({
 
   /**
@@ -66,4 +67,24 @@ Page({
   
   },
 
+  sendCode:function(){
+
+    // getLoginCode({ phone: "13522199952" }, { res:true,loading:false }).then(res => {
+    //   console.log(res) //{ code:"10000",mas:"",data:{} }
+    //   if (res.code == 10000) {
+    //     this.list = res.data;
+    //   } else {
+    //     alert(res.msg)
+    //   }
+    // })
+
+    getUserMsgs({ phone: "13121485350" })
+    .then(data=>{
+      console.log(data) 
+      // data && wx.showToast({ title: "验证码发送成功!"})
+      data && wx.showToast({ title: data.msg})
+    })
+
+
+  }
 })

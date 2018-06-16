@@ -1,7 +1,9 @@
 
 {
   "navigationBarTitleText": "我的收藏",
+  "onReachBottomDistance":0,
   "usingComponents": {
-    "x-Gooditem": "/Components/GoodItem/index"
+    "x-Gooditem": "/Components/GoodItem/index",
+    "x-loadmoreLoding": "/Components/LoadmoreLoding/index"
   }
 }

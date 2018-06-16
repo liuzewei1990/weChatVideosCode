@@ -1,17 +1,19 @@
 {
   "pages": [
     "pages/userHome/index",
+    "pages/index/index",
+    "pages/login/index",
+    "pages/userColle/index",
+    "pages/play/index",
     "pages/userMoneyExportHistory/index",
     "pages/userHistory/index",
     "pages/userMoney/index",
     "pages/userMoneyBindAlipay/index",
-    "pages/userColle/index",
     "pages/userMoneyExport/index",
     "pages/userVip/index",
     "pages/userHomeCenter/index",
     "pages/userNotice/index",
-    "pages/logs/logs",
-    "pages/index/index"
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",

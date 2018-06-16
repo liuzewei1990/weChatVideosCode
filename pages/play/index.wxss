@@ -1,0 +1,57 @@
+/* pages/play/index.wxss */
+
+.video-box{
+  height: 300rpx;
+}
+
+.video-box video{
+  width: 100%;
+  height: 300rpx;
+}
+
+/*滚动容器  */
+
+/* scroll-view{
+  height:calc(100% - 300rpx);
+} */
+
+.video-info{
+  background-color: #fff;
+  padding:0 20rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  color: #666;
+   /* margin-top: -20rpx; */
+  position: relative;
+  top:-20rpx;
+  /* width: 100%; */
+  /* z-index: 200;  */
+}
+
+.btn{
+  display: inline-block;
+  text-align: center;
+  float: right;
+  margin:0rpx 10rpx 20rpx;
+}
+.videoLen{
+  padding: 20rpx;
+  background: #fff;
+}
+.videoLen-title{
+  font-size: 26rpx;
+  color: #000;
+  margin-bottom: 10rpx;
+}
+.videoLen-item{
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  color: #000;
+  font-size: 28rpx;
+  background: #f2f2f2;
+  margin-right: 40rpx;
+  border-radius: 6rpx;
+}

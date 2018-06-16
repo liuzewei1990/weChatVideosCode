@@ -1,0 +1,39 @@
+/* pages/login/index.wxss */
+
+page{
+  background: #FFF;
+}
+
+.logo image{
+  display: block;
+  width:134rpx;
+  height:134rpx;
+  background: rgb(20, 138, 167);
+  border-radius: 10rpx;
+  margin: 150rpx auto;
+}
+
+.wrap{
+  padding: 20rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.wrap .input-row{
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  border-bottom: 1px solid #eee;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+
+input{
+  font-size: 30rpx;
+}
+
+.send-code{
+  background-color: rgb(20, 138, 167);
+  color: #FFF;
+  font-size: 28rpx;
+}
