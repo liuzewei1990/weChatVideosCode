@@ -1,15 +1,30 @@
 /* Components/Radiovip/index.wxss */
 
+.x-radiovip-box{
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  padding:20rpx;
+  box-sizing: border-box;
+}
+
+/* .clear::after{
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+} */
+
+
 .x-radiovip{
-  display: inline-block;
-  width: 190rpx;
-  height: 168rpx;
+  width: 28.5%; 
+  min-height: 168rpx;
   border-radius: 20rpx;
   border: 1rpx solid #eee;
   text-align: center;
-  margin: 20rpx 20rpx 0;
-  background: #FFF;
-  
+   margin: 20rpx 2% 0;   
+  background: #FFF; 
 }
 
 .month{
@@ -28,7 +43,6 @@
 .desc{
   font-size: 22rpx;
   color: #999;
-  /* margin-top: 15rpx; */
 }
 
 .checked{

@@ -1,13 +1,18 @@
 <!--Components/Radiovip/index.wxml-->
-<view class='x-radiovip {{checkedindex == index ? "checked" : ""}}' 
-    wx:for="{{list}}" 
-    wx:key="index" 
-    wx:for-index="index" 
-    wx:for-item="item" 
-    data-item="{{item}}" 
-    data-checkedindex="{{index}}" 
-    bind:tap="handleChecked">
-    <view class='month'>{{item.month}}个月</view>
-    <view class='monery'>￥{{item.monery}}</view>
-    <view class='desc'>折后{{item.desc}}/月</view>
+
+<view class='x-radiovip-box clear'>
+
+  <view class='x-radiovip {{checkedindex == index ? "checked" : ""}}' 
+      wx:for="{{list}}" 
+      wx:key="index" 
+      wx:for-index="index" 
+      wx:for-item="item" 
+      data-item="{{item}}" 
+      data-checkedindex="{{index}}" 
+      bind:tap="handleChecked">
+      <view class='month' wx:if="{{item.vipMonth != ''}}">{{item.vipMonth}}个月</view>
+      <view class='monery' wx:if="{{item.payMoney != ''}}">￥{{item.payMoney}}</view>
+      <view class='desc'>{{item.showDesc}}</view>
+  </view>
+
 </view>

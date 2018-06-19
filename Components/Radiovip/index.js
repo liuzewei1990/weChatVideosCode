@@ -22,11 +22,11 @@ Component({
   },
 
   ready(){
-    let dataset = {
-      checkedindex: this.properties.checkedindex,
-      item: this.properties.list[this.properties.checkedindex]
-    }
-    this.setChecked(dataset);
+    // let dataset = {
+    //   checkedindex: this.properties.checkedindex,
+    //   item: this.properties.list[this.properties.checkedindex]
+    // }
+    // this.setChecked(dataset);
   },
 
   /**
