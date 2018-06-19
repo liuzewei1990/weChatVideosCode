@@ -26,6 +26,20 @@ function HTTP(obj, config){
         if (res.statusCode == 200) {
           let data = res.data;
 
+          //拦截用户是否登录
+          if (data.code == "10001" && data.msg == "登入过期，请重新登入！"){
+            
+            wx.redirectTo({
+              url: "/pages/login/index?msg=登入过期，请重新登入！",
+              success: () => { },
+              fail: () => {
+                wx.showToast({title: '网络异常，请重试！',icon: 'none',duration: 2000})
+              }
+            })
+            return;
+          }
+
+
           if (config.res){
             //返回 { code:10000,msg:"消息",data:[] }
             resolve(data) 
@@ -39,7 +53,7 @@ function HTTP(obj, config){
           }
         }else{
           wx.showToast({ title: "HTTP:状态码异常", icon: "none", duration: 2000 })
-          reject(new Error("HTTP:状态码异常"));
+          reject("HTTP:状态码异常！");
         }
       },
       fail: (err) => {
@@ -71,5 +85,11 @@ export default{
   },
   POST(url, data, config){
     return HTTP({ url, data, method: "POST" }, config);
+  },
+
+  POSTformdata(url, data, config) {
+    return HTTP({ url, data, method: "POST", header:{
+      'content-type': 'multipart/form-data'
+    } }, config);
   }
 }
