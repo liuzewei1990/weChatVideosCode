@@ -33,6 +33,39 @@ App({
       }
     })
   },
+  checkUserAuth(options){
+    options = options || {};
+    let token = "";
+    try{
+      token = wx.getStorageSync('token');
+    }catch(err){
+      wx.showToast({ title: err.message, icon: "none" })
+    }
+    if (token) { return true; }
+    else {
+
+      wx.showModal({
+        title: '提示',
+        content: '是否前往登录！',
+        success: function (res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: "/pages/login/index?redirect=" + (options.redirect || ""),
+              success: () => { },
+              fail: () => {
+                wx.showToast({ title: '网络异常，请重试！', icon: 'none', duration: 2000 })
+              }
+            })
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+
+
+      
+    }
+  },
   globalData: {
     userInfo: null
   }
