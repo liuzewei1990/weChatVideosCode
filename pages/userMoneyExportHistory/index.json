@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "提现明细",
   "usingComponents": {
-    "x-pannel": "/Components/Pannel/index"
+    "x-pannel": "/Components/Pannel/index",
+    "x-loadmoreLoding": "/Components/LoadmoreLoding/index"
   }
 }

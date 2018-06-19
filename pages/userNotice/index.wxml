@@ -1,4 +1,8 @@
 <!--pages/share/index.wxml-->
 <view class='martop20'></view>
-<x-msg title="系统消息" desc="您的会员快到期了哦" time="2018-03-27 10:00" borderLine></x-msg>
-<x-msg title="系统消息" desc="您的会员快到期了哦您的会员快到期了哦您的会员快到期了哦您的会员快到期了哦" time="2018-03-27 10:00"></x-msg>
+<x-msg
+wx:for="{{list}}"
+wx:key="{{index}}"
+wx:item="{{item}}"
+title="{{item.title}}" desc="{{item.content}}" time="{{item.createTime}}" borderLine></x-msg>
+<x-loadmoreLoding status="{{status}}" bind:tapError="onTapError"></x-loadmoreLoding>

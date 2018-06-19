@@ -13,9 +13,9 @@
 </view>
 
 <!-- <scroll-view scroll-y style="height:{{second_height}}px" id="mjltest"> -->
-
+<view style='padding-bottom:100rpx;'>
   <x-goodCell
-    wx:for="{{products}}"
+    wx:for="{{list}}"
     wx:key="index"
     wx:item="item"
     borderLine="true"
@@ -25,5 +25,6 @@
     date="{{item.uploadTime}}"
     to="/pages/play/index?id={{item.id}}"
   ></x-goodCell>
-<x-loadmoreLoding status="{{status}}" bind:tapError="onTapError"></x-loadmoreLoding>
+  <x-loadmoreLoding status="{{status}}" bind:tapError="onTapError"></x-loadmoreLoding>
+</view>
 <!-- </scroll-view> -->

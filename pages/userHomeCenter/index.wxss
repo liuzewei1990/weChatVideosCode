@@ -9,3 +9,9 @@
   overflow: hidden;
   margin-right: 30rpx;
 }
+.okBtn{
+  line-height: 50rpx;
+  /* border: 1rpx solid #ccc; */
+  margin-left: 15rpx;
+  font-size: 22rpx;
+}

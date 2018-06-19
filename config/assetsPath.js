@@ -21,6 +21,9 @@ export default  {
   playIcon: `${assetsPath}/bofanganniu@3x.png`,
   payShareIcon: `${assetsPath}/fenxiangtubiao@3x.png`,
   colleIcon: `${assetsPath}/shoucangtubiao@3x.png`,
-  msgIcon: `${assetsPath}/xiaoxitongzhi@3x.png`
+  colleIconActive: `${assetsPath}/shoucangtubiao-active@3x.png`,
+  msgIcon: `${assetsPath}/xiaoxitongzhi@3x.png`,
+
+  noDataPng: `${assetsPath}/noData.png`
 }
 

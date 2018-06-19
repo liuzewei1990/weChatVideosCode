@@ -20,15 +20,15 @@
 
 .radios{
   /* display: inline-block; */
-    display: flex;  
-    flex-wrap:wrap;  
+    /* display: flex;   */
+    /* flex-wrap:wrap;   */
    /* justify-content: flex-start; */
    /* align-content: flex-start;  */
       /* align-content:center;   */
 }
 
 .item{
-  margin:20rpx;
+  /* margin:18rpx; */
 }
 
 .trade-btn{

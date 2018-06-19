@@ -1,8 +1,8 @@
 {
   "navigationBarTitleText": "个人中心",
-  "enablePullDownRefresh":true,
   "usingComponents": {
     "x-cell":"/Components/Cell/index",
-    "x-header":"/Components/Header/index"
+    "x-header":"/Components/Header/index",
+    "x-loadmoreLoding": "/Components/LoadmoreLoding/index"
   }
 }

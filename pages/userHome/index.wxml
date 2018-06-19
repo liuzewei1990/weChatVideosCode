@@ -1,16 +1,17 @@
 <!--pages/myHome/index.wxml-->
-<view class='my-home'>
+<view class='my-home' wx:if="{{status == 'pageIn'}}">
 
   <view class='martop20'></view>
   
-  <x-header isLink headerUrl="http://img0.imgtn.bdimg.com/it/u=489423423,2450269323&fm=27&gp=0.jpg" title="手中的余温在泛滥手中的余温在泛滥手中的余温在泛滥1" to="../userHomeCenter/index">
-    <view slot="desc" class='mai-btn'>VIP会员</view>
+  <x-header isLink headerUrl="{{headImg}}" title="{{userName}}" to="../userHomeCenter/index?headImg={{headImg}}&userName={{userName}}">
+    <view slot="desc" class='mai-btn' wx:if="{{isVip}}">{{userType[isVip]}}</view>
   </x-header>
 
   <view class='martop20'></view>
   
   <x-cell isLink title="消息通知" borderLineOffset to="../userNotice/index">
     <image class='icon' src='{{assetsPath.msgIcon}}' slot="icon" style='width:26rpx;height:32rpx;'></image>
+    <view slot="desc" class='msgTips' wx:if="{{msgTips>0}}">{{msgTips>99?'99+':msgTips }}</view>
   </x-cell>
 
   <x-cell isLink title="我的收藏" borderLineOffset to="../userColle/index">
@@ -38,3 +39,4 @@
   </x-cell>
 
 </view>
+<x-loadmoreLoding status="{{status}}" bind:tapError="onTapError"></x-loadmoreLoding>

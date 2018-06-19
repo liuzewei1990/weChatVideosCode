@@ -14,3 +14,14 @@
   border-radius: 28rpx;
   text-align: center;
 }
+
+.msgTips{
+
+  margin-right: 20rpx;
+  padding:5rpx 15rpx;
+  box-sizing: border-box;
+  border-radius:  500rpx;
+  background: red;
+  color: #FFF;
+  font-size: 24rpx;
+}

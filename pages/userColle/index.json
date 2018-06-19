@@ -2,6 +2,8 @@
 {
   "navigationBarTitleText": "我的收藏",
   "onReachBottomDistance":0,
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle": "dark",
   "usingComponents": {
     "x-Gooditem": "/Components/GoodItem/index",
     "x-loadmoreLoding": "/Components/LoadmoreLoding/index"

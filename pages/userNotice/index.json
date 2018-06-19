@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "消息通知",
   "usingComponents": {
-    "x-msg": "/Components/Msg/index"
+    "x-msg": "/Components/Msg/index",
+    "x-loadmoreLoding": "/Components/LoadmoreLoding/index"
   }
 }

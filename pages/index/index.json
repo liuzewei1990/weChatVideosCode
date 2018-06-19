@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "首页",
   "usingComponents": {
     "x-goodCell":"/Components/GoodCell/index",
     "x-Tabs":"/Components/Tabs/index",

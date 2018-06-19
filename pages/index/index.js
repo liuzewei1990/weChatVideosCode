@@ -4,6 +4,7 @@
 const app = getApp()
 
 import { getIndexInfo, getVideoList } from "../../apis/index.js";
+import { loadMore } from "../../minxins/index.js";
 
 let products = [
   {
@@ -58,13 +59,12 @@ let products = [
 ]
 
 Page({
+
+  api: getVideoList,
+  ...loadMore,
   data: {
-    status:"init",
-    banners: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-    ],
+    ...loadMore.data,
+    banners: [],
     indicatorDots: true,
     autoplay: true,
     interval: 2000,
@@ -94,7 +94,7 @@ Page({
         categoryCode: ""
       }
     ],
-    products: []
+    list: []
   },
 
   onLoad: function () {
@@ -159,57 +159,16 @@ Page({
         length: 20
       }
     })
-    this.setData({ status: "init" })
-    this.setData({
-      products: []
-    });
-    this.loadData(this.data.query);
-  },
-
-  //监听下拉加载
-  onReachBottom(){
-    console.log("上拉")
-    let query = this.data.query;
-
-    if (this.data.status !== "error") {
-      query.start++;
-      this.setData({ query })
-    }
-
-    this.loadData(this.data.query);
-  },
-
-  //loadData数据
-  loadData(query) {
-    console.log("query:", query)
-    //如果已经加载完毕 阻止函数
-    if (this.data.status == "notData") return;
-
-    this.setData({ status: "loading" });
-    query.keyword = "";
-    query.categoryCode = "";
-    getVideoList(query)
-    .then(data => {
-      if(query.start == 0){
-        this.setData({ products: data.list });
-      }else{
-        this.setData({ products: this.data.products.concat(data.list) });
-      }
-
-      data.isMore == "none" && this.setData({ status: "notData" })
-      data.list.length == 0 && this.setData({ status: "null" })
+    this.setData({ status: "loadingEnd" })
+    // this.setData({list: []});
+    wx.pageScrollTo({
+      scrollTop: 150, //160
+      duration:0
     })
-    .catch(err => {
-      this.setData({ status: "error" })
-    })
-
+    this.loadData(this.data.query,true);
   },
 
-  //加载出错时
-  onTapError() {
-    console.log("onTapError")
-    this.loadData(this.data.query);
-  },
+  
 
   // 滚动监听 tabs组件 fixed定位
   onPageScroll(e){
@@ -220,4 +179,6 @@ Page({
     }
   }
 })
+
+
 

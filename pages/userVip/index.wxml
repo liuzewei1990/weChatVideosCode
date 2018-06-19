@@ -1,14 +1,15 @@
 <!--pages/share/index.wxml-->
 <view class='martop20'></view>
 
-<x-header isLink headerUrl="http://img0.imgtn.bdimg.com/it/u=489423423,2450269323&fm=27&gp=0.jpg" minW title="手中的余温在泛滥手中的余温在泛滥手中的余温在泛滥">
-  <view slot="title" class='trade-history-btn' bind:tap="toHostory">购买历史</view>
-  <view slot="desc">2018-04-13 到期</view>
+<x-header isLink headerUrl="{{headImg}}" minW title="{{userName}}">
+  <view slot="title" class='trade-history-btn' bind:tap="toHostory" wx:if="{{headImg}}">购买历史</view>
+  <view slot="desc">{{vipExpiredTime}}</view>
 </x-header>
 
 <view class='martop20'></view>
+<x-radiovip list="{{vipList}}" bind:checked="onChecked" checkedindex="{{checkedindex}}"></x-radiovip>
+<view class='martop20'></view>
 
 <view class='select'>
-  <x-radiovip list="{{radioList}}" bind:checked="onChecked" checkedindex="2"></x-radiovip>
   <button class='trade-btn' size="default" loading="{{false}}" hover-class="other-button-hover" bind:tap="tradeBtn"> 立即购买 </button> 
 </view>

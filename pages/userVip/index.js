@@ -1,4 +1,7 @@
 // pages/share/index.js
+import { userPayVip } from "../../apis/index.js";
+import { alipayVip } from "../../apis/index.js";
+
 Page({
 
   /**
@@ -6,28 +9,26 @@ Page({
    */
   data: {
     checked:{},
-    radioList:[
+    checkedindex:0,
+    vipList:[
       {
-        month:"1",
-        monery: "25",
-        desc:"22.0",
+        id:"",
+        vipMonth:"",
+        payMoney: "",
+        showDesc:"",
       },
       {
-        month: "2",
-        monery: "25",
-        desc: "22.0",
+        id: "",
+        vipMonth: "",
+        payMoney: "",
+        showDesc: "",
       },
       {
-        month: "3",
-        monery: "25",
-        desc: "22.0",
+        id: "",
+        vipMonth: "",
+        payMoney: "",
+        showDesc: "",
       },
-      {
-        month: "4",
-        monery: "25",
-        desc: "22.0",
-      }
-      
     ]
   },
 
@@ -35,7 +36,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    userPayVip().then(data=>{
+      this.setData(data);
+      this.onChecked({
+        detail:this.data.vipList[this.data.checkedindex]
+      });
+    })
+
   },
 
   /**
@@ -49,7 +56,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**
@@ -92,7 +99,7 @@ Page({
    */
   toHostory:function(){
     wx.navigateTo({
-      url: "../userHistory/index",
+      url: "../userVipHistory/index",
       success: () => { },
       fail: () => {
         wx.showToast({
@@ -105,21 +112,30 @@ Page({
   },
 
   tradeBtn:function(){
-    wx.showModal({
-      title: '提示',
-      content: '选择了' + this.data.checked.month + "个月",
-      success: function (res) {
-        if (res.confirm) {
-          console.log('用户点击确定')
-        } else if (res.cancel) {
-          console.log('用户点击取消')
-        }
-      }
-    })
+    // wx.showModal({
+    //   title: '提示',
+    //   content: '选择了' + this.data.checked.vipMonth + "个月",
+    //   success: function (res) {
+    //     if (res.confirm) {
+    //       console.log('用户点击确定')
+    //     } else if (res.cancel) {
+    //       console.log('用户点击取消')
+    //     }
+    //   }
+    // })
+    console.log("会员下单", this.data.checked);
+    if (this.data.checked.id){
+      alipayVip({ vipTypeId: this.data.checked.id }).then(data => {
+        console.log(data)
+      })
+    }else{
+      wx.showToast({ title: '无法下单，请联系客服！', icon: 'none' })
+    }
+   
   },
 
   onChecked:function(item){
-    console.log(item.detail)
+    console.log(111,item.detail)
     this.setData({
       checked:item.detail
     })

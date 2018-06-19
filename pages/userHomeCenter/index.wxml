@@ -1,6 +1,16 @@
 <!--pages/userInfo/index.wxml-->
 <view class='martop20'></view>
-<x-cell title="头像" isLink borderLine>
-  <view slot="desc" class='user-header' style="background-image:url({{assetsPath.headerIcon}});"></view>
+<x-cell title="头像" isLink borderLine bind:tap="chooseImage">
+  <view slot="desc" class='user-header' style="background-image:url({{headImg}});"></view>
 </x-cell>
-<x-cell title="昵称" desc="手中的余温在泛滥" isLink></x-cell>
+
+<x-cell title="昵称" desc="{{userName}}" wx:if="{{isSwitch}}" isLink bind:tap="handleSwitch"></x-cell>
+  
+<form bindsubmit='confirm'>
+  <x-cell title="昵称" wx:if="{{!isSwitch}}">
+      <input slot="desc" type='text' name="userName" focus value='{{userName}}' style="text-align:right;" maxlength='8' confirm-type="done" placeholder='长度限制8个字符'></input>
+      <button slot="desc" class='okBtn' form-type='submit'>确定</button>
+  </x-cell>
+</form>  
+
+

@@ -2,7 +2,7 @@
 
 <view class='martop20'></view>
 
-<x-moneyCard money="0.00">
+<x-moneyCard money="{{money}}">
   <navigator url="../userMoneyExportHistory/index" style='float:right;padding:10rpx 30rpx;' hover-class="navigator-hover">交易记录</navigator>
 </x-moneyCard>
 

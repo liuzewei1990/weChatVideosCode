@@ -1,5 +1,7 @@
 import assetsPath from "../../config/assetsPath.js";
 
+import { getUserIndex } from "../../apis/index.js";
+const app = getApp()
 // pages/myHome/index.js
 Page({
 
@@ -8,13 +10,13 @@ Page({
    */
   data: {
     assetsPath,
-    msgNotice: { path: 'msgNotice' }
+    status:"init",
+    userType: {
+      "user": "普通用户",
+      "vip": "VIP会员"
+    }
   },
 
-  test:function(){
-    console.log(1)
-    
-  },
 
   share:function(){
     wx.showToast({
@@ -29,6 +31,7 @@ Page({
       title: '退出成功',
       icon: 'success',
       duration: 2000
+      
     })
   },
 
@@ -36,7 +39,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    
   },
 
   /**
@@ -50,6 +53,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    app.checkUserAuth() && getUserIndex().then(data => {
+      this.setData(data);
+      this.setData({
+        msgTips: "654"
+      });
+
+      this.setData({ status: "pageIn" })
+    }).catch(err=>{
+      this.setData({ status:"error" })
+    })
   
   },
 
@@ -64,7 +77,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+   
   },
 
   /**
@@ -87,4 +100,6 @@ Page({
   onShareAppMessage: function () {
   
   }
+
+
 })

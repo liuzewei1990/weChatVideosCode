@@ -1,26 +1,35 @@
 <!--pages/play/index.wxml-->
-
+<view wx:if="{{productName}}">
 <view class="video-box">
-  <video src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+  <video
+  src="{{videoUrl}}"
   controls="{{true}}" 
   page-gesture="{{true}}"
-  poster="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
+  poster="{{preImage}}"
   ></video>
 </view>
 
 
 <scroll-view scroll-y="{{true}}" style="height:{{second_height*2}}rpx" id="mjltest" bind:scrolltolower="onLoadData">
 
-  <x-cell title="3000万营收的火爆课操盘手火爆课操盘手火爆课操盘手" desc="{{second_height}}" isLink></x-cell>
+  <!-- <x-cell title="{{productName}}" desc="简介" isLink></x-cell> -->
+  <view class='martop20'></view>
   <view class='video-info'>
-    <view>300次播放</view>
+    <view class='title'>
+      <text class='{{ isSummary?"name-summary":"name" }}'>{{productName}}</text>
+      <text class='desc' bind:tap="switchSummary">简介</text>
+      <image class='arraw {{isSummary?".arraw-rotate":""}}' bind:tap="switchSummary" src="{{assetsPath.arrawIcon}}" style="width:16rpx; height:24rpx;"></image>
+    </view>
+    <view>{{playCounts || 0}}次播放</view>
+    <view class='summary' wx:if="{{isSummary}}">简介：{{summary}}</view>
+
     <view class='clear'>
       <view class='btn'>
-        <image src='{{assetsPath.payShareIcon}}' style='width:24rpx; height:26rpx;'></image>
+         <image src='{{assetsPath.payShareIcon}}' style='width:24rpx; height:26rpx;'></image> 
         <view>分享</view>
       </view>
-      <view class='btn'>
-        <image src='{{assetsPath.colleIcon}}' style='width:24rpx; height:26rpx;'></image>
+      <view class='btn'bind:tap="switchIsCollect">
+        <image src='{{isCollect=="collected"?assetsPath.colleIconActive:assetsPath.colleIcon}}' style='width:24rpx; height:26rpx;'></image>
         <view>收藏</view>
       </view>
     </view>
@@ -29,67 +38,14 @@
   <view class='videoLen'>
     <view class='videoLen-title'>剧集</view>
     <view>
-      <text class='videoLen-item'>1</text>
-      <text class='videoLen-item'>2</text>
-      <text class='videoLen-item'>3</text>
-      <text class='videoLen-item'>4</text>
+      <text
+      wx:for="{{items}}"
+      wx:key="index"
+      wx:item="item"
+       class='videoLen-item'>{{index+1}}</text>
     </view>
   </view>
   <view class='martop20'></view>
-
-  <x-goodCell
-    reverse
-    borderLine="true"
-    videoUrl="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
-    title="九型人格亲子特训班-让你成为最懂孩子的成长"
-    num="300"
-    date="2018.3.27"
-  ></x-goodCell>
-
-  <x-goodCell
-    reverse
-    borderLine="true"
-    videoUrl="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
-    title="九型人格亲子特训班-让你成为最懂孩子的成长"
-    num="300"
-    date="2018.3.27"
-  ></x-goodCell>
-
-  <x-goodCell
-    reverse
-    borderLine="true"
-    videoUrl="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
-    title="九型人格亲子特训班-让你成为最懂孩子的成长"
-    num="300"
-    date="2018.3.27"
-  ></x-goodCell>
-
-  <x-goodCell
-    reverse
-    borderLine="true"
-    videoUrl="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
-    title="九型人格亲子特训班-让你成为最懂孩子的成长"
-    num="300"
-    date="2018.3.27"
-  ></x-goodCell>
-
-  <x-goodCell
-    reverse
-    borderLine="true"
-    videoUrl="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
-    title="九型人格亲子特训班-让你成为最懂孩子的成长"
-    num="300"
-    date="2018.3.27"
-  ></x-goodCell>
-
-  <x-goodCell
-    reverse
-    borderLine="true"
-    videoUrl="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
-    title="九型人格亲子特训班-让你成为最懂孩子的成长"
-    num="300"
-    date="2018.3.27"
-  ></x-goodCell>
 
   <x-goodCell
     reverse
@@ -146,3 +102,5 @@
   ></x-goodCell>
 
 <x-loadmore> -->
+
+</view>

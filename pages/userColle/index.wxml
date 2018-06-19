@@ -1,15 +1,17 @@
 <!--pages/share/index.wxml-->
-<view class='list'>
-  <x-Gooditem 
-    wx:for="{{list}}"
-    wx:key="index"
-    wx:index="index"
-    wx:item="item"
-    imgUrl="{{item.imgUrl}}" 
-    title="{{item.title}}" 
-    num="{{item.num}}"
-    to="../play/index?id={{index}}"
-    class="martop20">
-  </x-Gooditem>
+<view wx:if="{{_pageShow}}">
+  <view class='list'>
+    <x-Gooditem 
+      wx:for="{{list}}"
+      wx:key="index"
+      wx:index="index"
+      wx:item="item"
+      imgUrl="{{item.productImage}}" 
+      title="{{item.productName}}" 
+      num="{{item.playCounts}}"
+      to="../play/index?id={{item.id}}"
+      class="martop20">
+    </x-Gooditem>
+  </view>
+  <x-loadmoreLoding status="{{status}}" bind:tapError="onTapError"></x-loadmoreLoding>
 </view>
-<x-loadmoreLoding status="{{status}}" bind:tapError="onTapError"></x-loadmoreLoding>

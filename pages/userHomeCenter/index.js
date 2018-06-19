@@ -1,20 +1,22 @@
 // pages/userInfo/index.js
 
-import assetsPath from "../../config/assetsPath.js";
+// import assetsPath from "../../config/assetsPath.js";
+import { upload, uploadImage, editUserInfo } from "../../apis/index.js";
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    assetsPath
+    isSwitch:true,
+    userName:'123'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData(options);
   },
 
   /**
@@ -64,5 +66,46 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  handleSwitch(){
+    this.setData({ isSwitch:false});
+  },
+  confirm(e){
+    let userName = e.detail.value;
+    var value = userName.userName
+    editUserInfo({ userName: value }).then(bool => {
+      if (bool) {
+        this.setData({ userName: value, isSwitch: true });
+      }
+      console.log(this)
+    })
+  },
+  chooseImage(){
+    wx.chooseImage({
+      count:1,
+      success: ({ tempFilePaths, tempFiles})=>{
+
+        upload(tempFilePaths[0],"file",{})
+
+          .then(({ url })=>{
+            if(typeof url === "string"){
+              editUserInfo({ headImg: url}).then(bool=>{
+                if(bool){
+                  this.setData({ headImg: url });
+                  wx.showToast({ title: "修改成功！", icon: 'none' })
+                }
+              })
+            }
+          })
+
+          .catch(err=>{
+            wx.showToast({ title: err.message, icon: 'none' })
+          })
+      },
+      fail:(err)=>{
+        wx.showToast({ title: "未选择图片！", icon: 'none' })
+      }
+    })
   }
 })

@@ -21,11 +21,50 @@
   box-sizing: border-box;
   font-size: 26rpx;
   color: #666;
-   /* margin-top: -20rpx; */
   position: relative;
   top:-20rpx;
-  /* width: 100%; */
-  /* z-index: 200;  */
+  min-height: 220rpx;
+}
+
+.title{
+  display: flex;
+  align-items: top;
+  padding-top: 20rpx;
+  font-size:32rpx;
+  color: #000;
+  margin:20rpx 0;
+}
+
+.title .name{
+  flex: 0.8;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis; 
+}
+
+.title .name-summary{
+  flex: 1;
+}
+
+.title .desc{
+  flex: 0.2;
+  text-align: right;
+  color: #333;
+  font-size: 26rpx;
+}
+
+.title .arraw{
+  margin-top:8rpx;
+  margin-left: 10rpx;
+  transform: rotate(90deg);
+}
+
+.title .arraw-rotate{
+  transform: rotate(-90deg);
+}
+
+.summary{
+  margin: 20rpx 0;
 }
 
 .btn{
@@ -34,6 +73,8 @@
   float: right;
   margin:0rpx 10rpx 20rpx;
 }
+
+
 .videoLen{
   padding: 20rpx;
   background: #fff;
@@ -55,3 +96,5 @@
   margin-right: 40rpx;
   border-radius: 6rpx;
 }
+
+

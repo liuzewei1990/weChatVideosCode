@@ -1,20 +1,24 @@
 // pages/share/index.js
 
 import assetsPath from "../../config/assetsPath.js";
+import {getUserMoney} from "../../apis/index.js"
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    assetsPath
+    assetsPath,
+    money:"0.00"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    getUserMoney().then(data=>{
+      this.setData(data)
+    })
   },
 
   /**
