@@ -5,6 +5,7 @@
   background: #FFF;
   padding: 30rpx 20rpx;
   align-items: center;
+  min-height: 120rpx;
 }
 
 .header-img{
@@ -15,6 +16,7 @@
   overflow: hidden;
   background-size:100% 100%; 
   margin-right: 40rpx; 
+  border: 1px solid #eee;
 }
 
 .header-info{
