@@ -17,6 +17,7 @@ export let loadMore = {
       status:"init"
     });
 
+    //true 表示刷新操作
     this.loadData(this.data.query,true);
 
   },
@@ -24,51 +25,55 @@ export let loadMore = {
   //监听下拉加载
   onReachBottom() {
     console.log("上拉")
-    let query = this.data.query;
-
+    //只有状态为 loadingEnd的时候：才能load
     if (this.data.status === "loadingEnd") {
+      let query = this.data.query;
       query.start++;
       this.setData({ query })
+      this.loadData(this.data.query);
     }
-
-    this.loadData(this.data.query);
   },
 
   //loadData数据
   loadData(query,isRefresh) {
-    console.log(this)
     if (!this.api) {
       wx.showToast({ title: '请在page中声明api方法', icon: 'none' });
       return;
     }
+
     console.log("query:", query)
-    //如果已经加载完毕 阻止函数
+    //如果已经加载完毕 || 没有数据 || 正在加载中 == 阻止执行
     if (this.data.status == "notData" || this.data.status == "null" || this.data.status == "loading") return;
 
+    //如果是刷新操作，不显示loading
     isRefresh || this.setData({ status: "loading" });
 
     query.keyword = "";
     query.categoryCode = "";
 
-
+    //页面声明的相应接口调用
     this.api(query)
       .then(data => {
+        //收起下拉刷新loading条
         wx.stopPullDownRefresh();
 
+        //暂无数据
         if (data.list.length == 0 && query.start == 0){
           this.setData({ status: "null", _pageShow: true,list:[] });
           return;
         };
         
+        //刷新重新赋值 || 下拉加载更多
         if (isRefresh)
           this.setData({ list: data.list });
         else 
           this.setData({ list: this.data.list.concat(data.list) });
 
+        //重置loadingEnd状态 注意：loadingEnd 和 loading都会显示加载动画
         this.setData({ status: "loadingEnd"})
 
+        //检查是否有更多数据
         data.isMore == "none" && this.setData({ status: "notData" });
-        // if (data.list.length == 0 && query.start == 0) this.setData({ status: "null" });
 
         //让page显示
         this.setData({ _pageShow: true });
