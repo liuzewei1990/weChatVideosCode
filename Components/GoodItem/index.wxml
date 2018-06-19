@@ -1,7 +1,7 @@
 <!--Components/GoodItem/index.wxml-->
 <view class='good-item' bind:tap="toUrl">
-  <view class='header-img'>
-    <image src='{{imgUrl}}'></image>
+  <view class='header-img' style='background-image:url({{imgUrl}});'>
+    <!-- <image src='{{imgUrl}}' mode="widthFix"></image> -->
   </view>
   <view class='title'>{{title}}</view>
   <view class='num'>
