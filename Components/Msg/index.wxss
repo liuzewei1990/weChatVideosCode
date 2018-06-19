@@ -31,10 +31,10 @@
 
 .header-info .title .name{
   display: inline-block;
-  width:500rpx; 
+  /* width:500rpx; 
   overflow: hidden;
   white-space: nowrap;
-  text-overflow:ellipsis;
+  text-overflow:ellipsis; */
 }
 
 .header-info .title .minW{
