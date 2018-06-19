@@ -1,4 +1,5 @@
 // Components/LoadmoreLoding/index.js
+import assetsPath from "../../config/assetsPath.js";
 Component({
   /**
    * 组件的属性列表
@@ -14,7 +15,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    assetsPath
   },
 
   /**
