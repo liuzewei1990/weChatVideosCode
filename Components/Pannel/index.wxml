@@ -4,13 +4,16 @@
 ts/Pannel/index.wxml-->
 <view class='x-pannel'>
 <view class='title'>
-<text class='title-left'>提现到支付宝</text>
-<text class='title-right red'>{{money}}</text>
+  <text class='title-left'>提现到支付宝</text>
+  <text class='title-right red'>{{money}}</text>
 </view>
-<view class='order-no'>订单编号：{{orderNo}}</view>
-<view>
-<text class='order-no'>支付宝号：{{alipayNo}}</text>
-<text class='title-right order-no'>{{date}}</text>
+<view class='row'>
+  <text class='clo clo-l'>订单编号：{{orderNo}}</text>
+  <text class='clo clo-r'>{{status}}</text>
+</view>
+<view class='row'>
+  <text class='clo clo-l'>支付宝号：{{alipayNo}}</text>
+  <text class='clo clo-r'>{{date}}</text>
 </view>
 
 </view>

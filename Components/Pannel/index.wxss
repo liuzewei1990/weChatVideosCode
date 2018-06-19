@@ -2,25 +2,34 @@
 .x-pannel{
   background: #fff;
   padding: 15rpx 20rpx;
+  font-size: 24rpx;
+  color: #666;
 }
 .title{
   font-size: 30rpx;
-
+  display: flex;
 }
 .title-left{
-/* float: left */
-color: #000;
-margin-bottom: 20rpx;
-display: inline-block
+  flex: 1;
+  color: #000;
+  margin-bottom: 20rpx;
+  display: inline-block
+}
 
-}
-.title-right{
-  float: right
-}
 .red{
   color: #f70000;
 }
-.order-no{
-  font-size: 24rpx;
-  color: #666;
+
+.row{
+  display: flex;
+}
+
+.clo{
+  /* background: #eee; */
+  min-height: 30rpx;
+  margin:3rpx 0;
+}
+
+.clo-l{
+  flex: 1;
 }

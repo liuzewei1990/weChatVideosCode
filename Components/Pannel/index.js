@@ -8,6 +8,7 @@ Component({
     orderNo:String,
     alipayNo: String,
     date: String,
+    status: String,
     list:Array,
   },
 
