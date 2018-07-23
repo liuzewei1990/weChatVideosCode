@@ -3,7 +3,6 @@ import config from "./index.config.js";
 const assetsPath = config[config.build].assetsPath;
 export default  {
   arrawIcon: `${assetsPath}/fanhuixiayiye@3x.png`,
-  headerIcon: "http://img0.imgtn.bdimg.com/it/u=489423423,2450269323&fm=27&gp=0.jpg",
   itemHeader: `${assetsPath}/header.jpeg`,
   
   

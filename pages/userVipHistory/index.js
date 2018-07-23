@@ -11,14 +11,6 @@ Page({
   data: {
     ...loadMore.data,
     list:[
-      {
-        "accountNum": "18401762162",
-        "money": "101.0",
-        "accountName": "宝",
-        "accountType": "weixin",
-        "orderNum": "201804152244686782",
-        "status": "verify"//审核中
-      }
     ],
     query:{
       start: 0,

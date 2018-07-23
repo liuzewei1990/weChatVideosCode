@@ -10,6 +10,8 @@
   margin-right: 30rpx;
 }
 .okBtn{
+  width:150rpx;
+  text-align: center;
   line-height: 50rpx;
   /* border: 1rpx solid #ccc; */
   margin-left: 15rpx;

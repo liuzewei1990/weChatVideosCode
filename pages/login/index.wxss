@@ -28,6 +28,10 @@ page{
   box-sizing: border-box;
 }
 
+.phone,.code{
+  /* width: 180rpx; */
+}
+
 input{
   font-size: 30rpx;
 }

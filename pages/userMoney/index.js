@@ -1,7 +1,8 @@
 // pages/share/index.js
 
 import assetsPath from "../../config/assetsPath.js";
-import {getUserMoney} from "../../apis/index.js"
+import {getUserMoney} from "../../apis/index.js";
+const app = getApp()
 Page({
 
   /**
@@ -9,6 +10,7 @@ Page({
    */
   data: {
     assetsPath,
+    ajax: app.globalData.ajax,
     money:"0.00"
   },
 
@@ -16,6 +18,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(app)
     getUserMoney().then(data=>{
       this.setData(data)
     })

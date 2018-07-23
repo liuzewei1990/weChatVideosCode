@@ -2,27 +2,32 @@
 <view class='my-home' wx:if="{{status == 'pageIn'}}">
 
   <view class='martop20'></view>
-  
-  <x-header isLink headerUrl="{{headImg}}" title="{{userName}}" to="../userHomeCenter/index?headImg={{headImg}}&userName={{userName}}">
-    <view slot="desc" class='mai-btn' wx:if="{{isVip}}">{{userType[isVip]}}</view>
+
+  <!-- 未登录 -->
+  <x-header wx:if="{{!isLogin}}" isLink title="立即登录" desc="登录后可享受更多特权" to="../login/index">
+    
   </x-header>
+  <!-- 已登录 -->
+   <x-header wx:if="{{isLogin}}" isLink headerUrl="{{headImg}}" title="{{userName}}" to="../userHomeCenter/index?headImg={{headImg}}&userName={{userName}}">
+    <view slot="desc" class='mai-btn' wx:if="{{isVip}}">{{userType[isVip]}}</view>
+  </x-header> 
 
   <view class='martop20'></view>
   
-  <x-cell isLink title="消息通知" borderLineOffset to="../userNotice/index">
+  <x-cell isLink wx:if="{{isLogin}}" title="消息通知" borderLineOffset to="../userNotice/index">
     <image class='icon' src='{{assetsPath.msgIcon}}' slot="icon" style='width:26rpx;height:32rpx;'></image>
     <view slot="desc" class='msgTips' wx:if="{{msgTips>0}}">{{msgTips>99?'99+':msgTips }}</view>
   </x-cell>
 
-  <x-cell isLink title="我的收藏" borderLineOffset to="../userColle/index">
+  <x-cell isLink wx:if="{{isLogin}}" title="我的收藏" borderLineOffset to="../userColle/index">
     <image class='icon' src='{{assetsPath.xingIcon}}' slot="icon" style='width:28rpx;height:26rpx;'></image>
   </x-cell>
 
-  <x-cell isLink title="购买会员" borderLineOffset to="../userVip/index">
+  <x-cell isLink wx:if="{{isLogin}}" title="购买会员" borderLineOffset to="../userVip/index">
     <image class='icon' src='{{assetsPath.vipIcon}}' slot="icon" style='width:26rpx;height:24rpx;'></image>
   </x-cell>
 
-  <x-cell isLink title="购买历史" borderLineOffset to="../userHistory/index">
+  <x-cell isLink wx:if="{{isLogin}}" title="购买历史" borderLineOffset to="../userHistory/index">
     <image class='icon' src='{{assetsPath.historyIcon}}' slot="icon" style='width:28rpx;height:28rpx;'></image>
   </x-cell>
 
@@ -30,11 +35,11 @@
     <image class='icon' src='{{assetsPath.shareIcon}}' slot="icon" style='width:28rpx;height:22rpx;'></image>
   </x-cell>
 
-  <x-cell isLink title="我的钱包" borderLineOffset to="../userMoney/index">
+  <!-- <x-cell isLink wx:if="{{isLogin}}" title="我的钱包" borderLineOffset to="../userMoney/index">
     <image class='icon' src='{{assetsPath.moneyIcon}}' slot="icon" style='width:24rpx;height:28rpx;'></image>
-  </x-cell>
+  </x-cell> -->
 
-  <x-cell isLink title="退出登录" borderLineOffsetc bind:tap="exit">
+  <x-cell isLink wx:if="{{isLogin}}" title="退出登录" borderLineOffsetc bind:tap="exit">
     <image class='icon' src='{{assetsPath.exitIcon}}' slot="icon" style='width:28rpx;height:30rpx;'></image>
   </x-cell>
 

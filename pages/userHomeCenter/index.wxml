@@ -6,9 +6,9 @@
 
 <x-cell title="昵称" desc="{{userName}}" wx:if="{{isSwitch}}" isLink bind:tap="handleSwitch"></x-cell>
   
-<form bindsubmit='confirm'>
-  <x-cell title="昵称" wx:if="{{!isSwitch}}">
-      <input slot="desc" type='text' name="userName" focus value='{{userName}}' style="text-align:right;" maxlength='8' confirm-type="done" placeholder='长度限制8个字符'></input>
+<form bindsubmit='confirm' wx:if="{{!isSwitch}}">
+  <x-cell title="昵称">
+      <input slot="desc" type='text' name="userName" focus value='{{userName}}' style="text-align:right;" maxlength='11' confirm-type="done" placeholder='请输入昵称'></input>
       <button slot="desc" class='okBtn' form-type='submit'>确定</button>
   </x-cell>
 </form>  

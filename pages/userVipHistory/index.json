@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "购买历史",
+  "navigationBarTitleText": "VIP购买历史",
   "usingComponents": {
     "x-pannel": "/Components/Pannel/index",
     "x-loadmoreLoding": "/Components/LoadmoreLoding/index"

@@ -12,7 +12,6 @@
   <x-Tabs class='{{tabsFixed?"fixed":""}}' list="{{categorys}}" checkedindex="{{defaultIndex}}" isScroll="{{categorys.length > 6}}" bind:checked="handleChecked"></x-Tabs>
 </view>
 
-<!-- <scroll-view scroll-y style="height:{{second_height}}px" id="mjltest"> -->
 <view style='padding-bottom:100rpx;'>
   <x-goodCell
     wx:for="{{list}}"
@@ -23,8 +22,7 @@
     title="{{item.productName}}"
     num="{{item.playCounts}}"
     date="{{item.uploadTime}}"
-    to="/pages/play/index?id={{item.id}}"
+    to="/pages/play/index?id={{item.id}}&categoryCode={{item.categoryCode}}"
   ></x-goodCell>
   <x-loadmoreLoding status="{{status}}" bind:tapError="onTapError"></x-loadmoreLoding>
 </view>
-<!-- </scroll-view> -->

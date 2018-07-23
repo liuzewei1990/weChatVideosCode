@@ -1,4 +1,7 @@
 {
+  "navigationBarTitleText": "详情",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
   "usingComponents": {
     "x-goodCell": "/Components/GoodCell/index",
     "x-cell": "/Components/Cell/index"

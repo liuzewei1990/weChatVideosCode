@@ -6,6 +6,11 @@ export let loadMore = {
     status: "init",
     //首次加载完成
     _pageShow:false,
+    //默认值
+    query: {
+      start: 0,
+      length: 20
+    }
   },
 
   //下拉刷新
@@ -36,11 +41,15 @@ export let loadMore = {
 
   //loadData数据
   loadData(query,isRefresh) {
+
     if (!this.api) {
       wx.showToast({ title: '请在page中声明api方法', icon: 'none' });
       return;
     }
 
+    //防止对象引用
+    // query = { ...query };
+    
     console.log("query:", query)
     //如果已经加载完毕 || 没有数据 || 正在加载中 == 阻止执行
     if (this.data.status == "notData" || this.data.status == "null" || this.data.status == "loading") return;
@@ -48,8 +57,7 @@ export let loadMore = {
     //如果是刷新操作，不显示loading
     isRefresh || this.setData({ status: "loading" });
 
-    query.keyword = "";
-    query.categoryCode = "";
+    // query.categoryCode = "";
 
     //页面声明的相应接口调用
     this.api(query)

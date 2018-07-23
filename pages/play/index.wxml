@@ -1,106 +1,92 @@
 <!--pages/play/index.wxml-->
 <view wx:if="{{productName}}">
-<view class="video-box">
-  <video
-  src="{{videoUrl}}"
-  controls="{{true}}" 
-  page-gesture="{{true}}"
-  poster="{{preImage}}"
-  ></video>
-</view>
+  <view class="video-box">
 
+    <!-- buyed 购买过  -->
+    <video wx:if="{{isBuy === 'buyed'}}"
+      src="{{videoUrl}}"
+      controls="{{true}}" 
+      page-gesture="{{true}}"
+      poster="{{preImage}}"
+    ></video> 
 
-<scroll-view scroll-y="{{true}}" style="height:{{second_height*2}}rpx" id="mjltest" bind:scrolltolower="onLoadData">
-
-  <!-- <x-cell title="{{productName}}" desc="简介" isLink></x-cell> -->
-  <view class='martop20'></view>
-  <view class='video-info'>
-    <view class='title'>
-      <text class='{{ isSummary?"name-summary":"name" }}'>{{productName}}</text>
-      <text class='desc' bind:tap="switchSummary">简介</text>
-      <image class='arraw {{isSummary?".arraw-rotate":""}}' bind:tap="switchSummary" src="{{assetsPath.arrawIcon}}" style="width:16rpx; height:24rpx;"></image>
-    </view>
-    <view>{{playCounts || 0}}次播放</view>
-    <view class='summary' wx:if="{{isSummary}}">简介：{{summary}}</view>
-
-    <view class='clear'>
-      <view class='btn'>
-         <image src='{{assetsPath.payShareIcon}}' style='width:24rpx; height:26rpx;'></image> 
-        <view>分享</view>
-      </view>
-      <view class='btn'bind:tap="switchIsCollect">
-        <image src='{{isCollect=="collected"?assetsPath.colleIconActive:assetsPath.colleIcon}}' style='width:24rpx; height:26rpx;'></image>
-        <view>收藏</view>
-      </view>
-    </view>
+    <!-- nobuy 没有购买过  -->
+     <view class='nobuy' wx:if="{{isBuy === 'nobuy'}}">
+        <view class='text'>
+          <text>观看完整视频,请开通会员</text>  
+          <view class='martop20'></view>
+          <text>购买此视频：￥{{fee}}元</text>
+        </view>
+        <view class='btns'>
+          <view class='btn' bind:tap="buyVideo">购买视频</view>
+          <view class='btn' bind:tap="buyVip">购买会员</view>
+        </view>
+    </view> 
   </view>
 
-  <view class='videoLen'>
-    <view class='videoLen-title'>剧集</view>
-    <view>
-      <text
-      wx:for="{{items}}"
+
+  <scroll-view scroll-y="{{true}}" style="height:{{second_height*2}}rpx" id="mjltest" bind:scrolltolower="onLoadData">
+
+    <view class='martop20'></view>
+
+    <!-- 视频详情 -->
+    <view class='video-info'>
+      <view class='title'>
+        <text class='{{ isSummary?"name-summary":"name" }}'>{{productName}}</text>
+        <text class='desc' bind:tap="switchSummary">简介</text>
+        <image class='arraw {{isSummary?".arraw-rotate":""}}' bind:tap="switchSummary" src="{{assetsPath.arrawIcon}}" style="width:16rpx; height:24rpx;"></image>
+      </view>
+      <view>{{playCounts || 0}}次播放</view>
+      <view class='summary' wx:if="{{isSummary}}">简介：{{summary}}</view>
+
+      <view class='clear'>
+        <view class='btn'bind:tap="switchIsCollect">
+          <image src='{{isCollect=="collected"?assetsPath.colleIconActive:assetsPath.colleIcon}}' style='width:24rpx; height:26rpx;'></image>
+          <view>收藏</view>
+        </view>
+        <view class='btn'>
+          <image src='{{assetsPath.payShareIcon}}' style='width:24rpx; height:26rpx;'></image> 
+          <view>分享</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 视频剧集  -->
+    <view class='videoLen' wx:if="{{items.length > 1}}">
+      <view class='videoLen-title'>剧集</view>
+      <view>
+        <text
+          wx:for="{{items}}"
+          wx:key="index"
+          wx:item="item"
+          data-id="{{item.id}}"
+          bind:tap="playNum"
+          class='videoLen-item {{item.id==itemId?"num-active":""}}'>{{index+1}}</text>
+      </view>
+    </view> 
+    <view class='martop20'></view>
+
+    <!-- 相关视频 -->
+    <x-goodCell
+      wx:for="{{list}}"
+      wx:index="index"
       wx:key="index"
       wx:item="item"
-       class='videoLen-item'>{{index+1}}</text>
+      data-id="{{item.id}}"
+      bind:tap="linkVideo"
+
+      reverse
+      borderLine="true"
+      videoUrl="{{item.productImage}}"
+      title="{{item.productName}}"
+      num="{{item.playCounts}}"
+      date="{{item.uploadTime}}"
+    ></x-goodCell>
+
+    <!--提示用户登录  -->
+    <view wx:if="{{!isLogin}}" bind:tap="toLoginPage" class='is-show-login-tips'>
+      <text>登录后显示更多哦！</text>
+      <text class='to-login-btn'>点我登录！</text>
     </view>
-  </view>
-  <view class='martop20'></view>
-
-  <x-goodCell
-    reverse
-    borderLine="true"
-    videoUrl="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
-    title="九型人格亲子特训班-让你成为最懂孩子的成长"
-    num="300"
-    date="2018.3.27"
-  ></x-goodCell>
-</scroll-view>
-
-
-<!-- <x-loadmore api="getListApi" bind:watchData="onWatchData">
-
-  <x-cell title="3000万营收的火爆课操盘手火爆课操盘手火爆课操盘手" desc="{{second_height}}" isLink></x-cell>
-  <view class='video-info'>
-    <view>300次播放</view>
-    <view class='clear'>
-      <view class='btn'>
-        <image src='{{assetsPath.payShareIcon}}' style='width:24rpx; height:26rpx;'></image>
-        <view>分享</view>
-      </view>
-      <view class='btn'>
-        <image src='{{assetsPath.colleIcon}}' style='width:24rpx; height:26rpx;'></image>
-        <view>收藏</view>
-      </view>
-    </view>
-  </view>
-
-  <view class='videoLen'>
-    <view class='videoLen-title'>剧集</view>
-    <view>
-      <text class='videoLen-item'>1</text>
-      <text class='videoLen-item'>2</text>
-      <text class='videoLen-item'>3</text>
-      <text class='videoLen-item'>4</text>
-    </view>
-  </view>
-  <view class='martop20'></view>
-
-
-  <x-goodCell
-    wx:for="{{list}}"
-    wx:index="index"
-    wx:key="index"
-    wx:item="item"
-
-    reverse
-    borderLine="true"
-    videoUrl="item.videoUrl"
-    title="item.title"
-    num="item.num"
-    date="item.date"
-  ></x-goodCell>
-
-<x-loadmore> -->
-
+  </scroll-view>
 </view>

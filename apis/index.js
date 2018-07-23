@@ -1,8 +1,8 @@
 import http from "./http.js";
 import config from "../config/index.config.js";
-
 let baseUrl = config[config.build].baseUrl;
-
+let payUrl = config[config.build].payUrl;
+let uploadUrl = config[config.build].uploadUrl;
 /*
 * 公共域参数
 * token:登录接口获取
@@ -86,7 +86,7 @@ export const userCancelColleGoods = (data) => http.GET(`${baseUrl}/edu/mobile/uc
 export const getVideoList = (data) => http.GET(`${baseUrl}/edu/mobile/product/list`, data, { loading: false });
 
 //视频详情
-export const getVideoDetail = (data) => http.GET(`${baseUrl}/edu/mobile/product/detail`, { ...data, ...getPublicParams() }, { loading: false });
+export const getVideoDetail = (data) => http.GET(`${baseUrl}/edu/mobile/product/detail`, { ...data, ...getPublicParams() }, { loading: true });
 
 //视频类别
 export const getVideoType = (data) => http.GET(`${baseUrl}/edu/mobile/product/categorys`,data,{loading:false});
@@ -98,12 +98,14 @@ export const getGoodDetail = (data) => http.GET(`${baseUrl}/edu/mobile/product/d
 *  订单接口
 */
 
-//支付宝vip会员
-export const alipayVip = (data) => http.GET(`${baseUrl}/edu/mobile/order/wxPayVip`, { ...data, ...getPublicParams() });
+//支付vip会员
+export const alipayVip = (data) => http.GET(`${payUrl}/edu/mobile/order/wxPayVip`, { ...data, ...getPublicParams() });
 
 //支付一个商品
-export const alipayGoods = (data) => http.GET(`${baseUrl}/edu/mobile/order/wxPayProductItem`, { ...data, ...getPublicParams() });
+export const alipayGoods = (data) => http.GET(`${payUrl}/edu/mobile/order/wxPayProductItem`, { ...data, ...getPublicParams() });
 
+// 支付授权
+export const alipayAuth = (data) => http.GET(`${payUrl}/edu/mobile/login/auth`, { ...data, ...getPublicParams() });
 
 /*
 * 上传图片接口
@@ -127,7 +129,7 @@ export const upload = function(filePath, key, formData){
     try{
       console.log("uploadFilePath:", filePath);
       let uploadTask = wx.uploadFile({
-        url: `https://www.uhuijia.com.cn/image-server/uploadImage/oss`,
+        url: `${uploadUrl}/image-server/uploadImage/oss`,
         filePath: filePath,
         name: key || "",
         header: {

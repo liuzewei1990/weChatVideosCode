@@ -10,9 +10,7 @@ Page({
    */
   data: {
     ...loadMore.data,
-    list: [
-      
-    ],
+    list: [],
     query: {
       start: 0,
       length: 20

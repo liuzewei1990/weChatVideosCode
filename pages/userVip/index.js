@@ -1,7 +1,6 @@
 // pages/share/index.js
-import { userPayVip } from "../../apis/index.js";
-import { alipayVip } from "../../apis/index.js";
-
+import { userPayVip, alipayVip } from "../../apis/index.js";
+let app = getApp();
 Page({
 
   /**
@@ -99,7 +98,7 @@ Page({
    */
   toHostory:function(){
     wx.navigateTo({
-      url: "../userVipHistory/index",
+      url: "../userHistory/index",
       success: () => { },
       fail: () => {
         wx.showToast({
@@ -124,14 +123,35 @@ Page({
     //   }
     // })
     console.log("会员下单", this.data.checked);
+
     if (this.data.checked.id){
-      alipayVip({ vipTypeId: this.data.checked.id }).then(data => {
-        console.log(data)
-      })
+      app.payAuth(this.payOrder);
     }else{
       wx.showToast({ title: '无法下单，请联系客服！', icon: 'none' })
     }
    
+  },
+
+  //会员支付下单接口
+  payOrder(){
+    alipayVip({ vipTypeId: this.data.checked.id }).then(data => {
+      console.log(data)
+      wx.requestPayment(
+        {
+          ...data,
+          success: function (res) {
+            console.log("支付",res)
+            if (res.errMsg == "requestPayment:ok"){
+              wx.showToast({ title: "付款成功！", icon: 'none' });
+            }else{
+              wx.showToast({ title: "付款失败！", icon: 'none' });
+            }
+          },
+          fail: function (res) { },
+          complete: function (res) { }
+        }
+      )
+    }) 
   },
 
   onChecked:function(item){

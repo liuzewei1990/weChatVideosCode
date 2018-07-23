@@ -26,10 +26,10 @@ function HTTP(obj, config){
         if (res.statusCode == 200) {
           let data = res.data;
 
-          //拦截用户是否登录
+          //自动校验用户是否登录过期
           if (data.code == "10001" && data.msg == "登入过期，请重新登入！"){
             
-            wx.redirectTo({
+            wx.navigateTo({
               url: "/pages/login/index?msg=登入过期，请重新登入！",
               success: () => { },
               fail: () => {
@@ -62,7 +62,6 @@ function HTTP(obj, config){
         reject(new Error("网络异常，请稍后再试！"));
       },
       complete:()=>{
-        
       }
     }
 

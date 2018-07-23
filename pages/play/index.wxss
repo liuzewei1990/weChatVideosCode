@@ -8,6 +8,38 @@
   width: 100%;
   height: 300rpx;
 }
+ /* <!-- nobuy 没有购买过  --> */
+.video-box .nobuy{
+  height: 100%;
+  background:#444; 
+  color: #FFF;
+  text-align: center;
+  font-size:26rpx;
+}
+.video-box .nobuy .text{
+  padding: 50rpx;
+  box-sizing: border-box;
+}
+
+.video-box .nobuy text{
+  display: block;
+}
+
+.video-box .nobuy .btns{
+   display: flex;
+   justify-content: space-between;
+   padding: 0 150rpx;
+   box-sizing: border-box;
+}
+
+.video-box .nobuy .btn{
+  width: 180rpx;
+  height: 56rpx;
+  border-radius: 56rpx;
+  background: #FFF;
+  line-height: 56rpx;
+  color: #000;
+}
 
 /*滚动容器  */
 
@@ -67,7 +99,7 @@
   margin: 20rpx 0;
 }
 
-.btn{
+.video-info .btn{
   display: inline-block;
   text-align: center;
   float: right;
@@ -97,4 +129,17 @@
   border-radius: 6rpx;
 }
 
+.num-active{
+  background-color: red;
+  color: #FFF;
+}
 
+.is-show-login-tips{
+  text-align: center;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+}
+ 
+.to-login-btn{
+  color: red;
+}

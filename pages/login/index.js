@@ -58,7 +58,7 @@ Page({
   },
 
   //登录接口
-  searchBox(e){
+  userLogin(e){
     let values = e.detail.value;
     
     //手机号正则  
@@ -80,11 +80,10 @@ Page({
       try{
         let token = data.token;
         wx.setStorageSync("token", token);
-
         // 如果没有redirct地址，则去userHome用户中心
         if (this.data.redirect){
           wx.redirectTo({
-            url: this.data.redirect,
+            url: `/${decodeURIComponent(this.data.redirect)}`,
             success: () => { },
             fail: () => {
               wx.showToast({ title: '网络异常，请重试！', icon: 'none', duration: 2000 })

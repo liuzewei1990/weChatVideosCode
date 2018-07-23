@@ -10,7 +10,8 @@ Page({
    */
   data: {
     assetsPath,
-    status:"init",
+    status:"pageOut",
+    isLogin: false,
     userType: {
       "user": "普通用户",
       "vip": "VIP会员"
@@ -27,12 +28,13 @@ Page({
   },
 
   exit: function () {
+    wx.removeStorageSync('token')
     wx.showToast({
-      title: '退出成功',
+      title: '已退出！',
       icon: 'success',
       duration: 2000
-      
     })
+    this.onShow();
   },
 
   /**
@@ -53,17 +55,20 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    app.checkUserAuth() && getUserIndex().then(data => {
-      this.setData(data);
-      this.setData({
-        msgTips: "654"
-      });
-
-      this.setData({ status: "pageIn" })
-    }).catch(err=>{
-      this.setData({ status:"error" })
+    this.setData({
+      isLogin: wx.getStorageSync('token')?true:false
     })
-  
+
+    if(this.data.isLogin){
+      getUserIndex().then(data => {
+        this.setData(data);
+        this.setData({ status: "pageIn" })
+      }).catch(err=>{
+        this.setData({ status:"error" })
+      })
+    }else{
+      this.setData({ status: "pageIn" })
+    }
   },
 
   /**

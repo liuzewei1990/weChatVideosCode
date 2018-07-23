@@ -9,7 +9,7 @@
       imgUrl="{{item.productImage}}" 
       title="{{item.productName}}" 
       num="{{item.playCounts}}"
-      to="../play/index?id={{item.id}}"
+      to="../play/index?id={{item.id}}&categoryCode={{item.categoryCode}}"
       class="martop20">
     </x-Gooditem>
   </view>

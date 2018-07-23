@@ -1,8 +1,8 @@
 <!--pages/share/index.wxml-->
 <view class='martop20'></view>
 
-<x-header isLink headerUrl="{{headImg}}" minW title="{{userName}}">
-  <view slot="title" class='trade-history-btn' bind:tap="toHostory" wx:if="{{headImg}}">购买历史</view>
+<x-header isLink headerUrl="{{headImg}}" minW title="{{userName}}" bind:tap="toHostory">
+  <view slot="title" class='trade-history-btn' wx:if="{{headImg}}">购买历史</view>
   <view slot="desc">{{vipExpiredTime}}</view>
 </x-header>
 

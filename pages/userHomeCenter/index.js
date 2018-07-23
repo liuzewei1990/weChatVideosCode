@@ -9,7 +9,7 @@ Page({
    */
   data: {
     isSwitch:true,
-    userName:'123'
+    userName:''
   },
 
   /**
@@ -73,7 +73,11 @@ Page({
   },
   confirm(e){
     let userName = e.detail.value;
-    var value = userName.userName
+    var value = userName.userName;
+    if (!value){
+      wx.showToast({ title: "昵称不能为空！", icon: 'none' })
+      return;
+    }
     editUserInfo({ userName: value }).then(bool => {
       if (bool) {
         this.setData({ userName: value, isSwitch: true });

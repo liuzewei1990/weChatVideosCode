@@ -151,9 +151,10 @@ Page({
   handleChecked(item){
     let categoryCode = item.detail.categoryCode;
     let categoryName = item.detail.categoryName;
+
     this.setData({
       query: {
-        keyword: categoryName,
+        // keyword: categoryName,
         categoryCode: categoryCode,
         start: 0,
         length: 20
@@ -161,10 +162,12 @@ Page({
     })
     this.setData({ status: "loadingEnd" })
     // this.setData({list: []});
-    wx.pageScrollTo({
-      scrollTop: 150, //160
-      duration:0
-    })
+    if (this.data.list.length>this.data.query.length){
+      wx.pageScrollTo({
+        scrollTop: 150, //160
+        duration: 0
+      })
+    }
     this.loadData(this.data.query,true);
   },
 
