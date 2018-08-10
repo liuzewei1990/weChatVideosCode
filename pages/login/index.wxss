@@ -6,8 +6,8 @@ page{
 
 .logo image{
   display: block;
-  width:134rpx;
-  height:134rpx;
+  width:240rpx;
+  height:240rpx;
   background: rgb(20, 138, 167);
   border-radius: 10rpx;
   margin: 150rpx auto;

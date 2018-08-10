@@ -44,7 +44,7 @@
           <image src='{{isCollect=="collected"?assetsPath.colleIconActive:assetsPath.colleIcon}}' style='width:24rpx; height:26rpx;'></image>
           <view>收藏</view>
         </view>
-        <view class='btn'>
+        <view class='btn' catchtap="actionSheet">
           <image src='{{assetsPath.payShareIcon}}' style='width:24rpx; height:26rpx;'></image> 
           <view>分享</view>
         </view>
@@ -90,3 +90,15 @@
     </view>
   </scroll-view>
 </view>
+
+
+  
+<!--默认action-sheet为隐藏，由button触发-->
+<action-sheet hidden="{{actionSheetHidden}}" catchchange="actionSheet" >
+    <button open-type='share' catchtap="actionSheet"> 
+       发送给好友
+    </button>
+    <!--自动隐藏action-sheet-->
+    <action-sheet-cancel>取消</action-sheet-cancel>
+</action-sheet>
+ 

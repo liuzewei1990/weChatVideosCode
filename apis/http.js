@@ -52,7 +52,7 @@ function HTTP(obj, config){
             }
           }
         }else{
-          wx.showToast({ title: "HTTP:状态码异常", icon: "none", duration: 2000 })
+          wx.showToast({ title: `HTTP状态码：${res.statusCode}`, icon: "none", duration: 2000 })
           reject("HTTP:状态码异常！");
         }
       },

@@ -1,5 +1,5 @@
 export default {
-  build:"dev",//上线改成pro
+  build:"pro",//上线改成pro
 
   //开发环境配置
   dev:{

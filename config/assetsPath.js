@@ -23,6 +23,9 @@ export default  {
   colleIconActive: `${assetsPath}/shoucangtubiao-active@3x.png`,
   msgIcon: `${assetsPath}/xiaoxitongzhi@3x.png`,
 
-  noDataPng: `${assetsPath}/noData.png`
+  noDataPng: `${assetsPath}/noData.png`,
+  loginLogo: `${assetsPath}/logo.jpg`
+
+
 }
 

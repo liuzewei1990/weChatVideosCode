@@ -1,6 +1,6 @@
 <!--pages/login/index.wxml-->
 <view class='logo'>
-  <image src=''></image>
+  <image src='{{assetsPath.loginLogo}}'></image>
 </view>
 
  <form bindsubmit='userLogin'>

@@ -15,18 +15,14 @@ Page({
     userType: {
       "user": "普通用户",
       "vip": "VIP会员"
-    }
+    },
+    actionSheetHidden: true,
   },
-
-
-  share:function(){
-    wx.showToast({
-      title: '分享成功',
-      icon: 'success',
-      duration: 2000
-    })
+  actionSheet: function () {
+    this.setData({
+      actionSheetHidden: !this.data.actionSheetHidden
+    });
   },
-
   exit: function () {
     wx.removeStorageSync('token')
     wx.showToast({
@@ -103,8 +99,12 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
-  }
-
+    var imageUrl = assetsPath.loginLogo
+    return {
+      title: '友惠商学院',
+      path: '/pages/index/index',
+      imageUrl: imageUrl
+    }
+  },
 
 })

@@ -15,6 +15,7 @@ Page({
     isSummary:false,
     isLogin:false,
     itemId:0,
+    actionSheetHidden: true,
     // "productName": "大数据云计算课程",
     // "summary": "让你怀抱大数据的美好未来",//视频简介
     // "preImage": "http://www.uhuijia.com.cn/huifa/video/computer/1.jpg",//视频预览图
@@ -36,6 +37,11 @@ Page({
     //   "image": "http://www.uhuijia.com.cn/huifa/video/computer/4.jpg",//列表展示第四集
     //   "id": "4"
     // }]
+  },
+  actionSheet: function () {
+    this.setData({
+      actionSheetHidden: !this.data.actionSheetHidden
+    });
   },
 
   /**
@@ -109,7 +115,12 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    // var imageUrl = assetsPath.loginLogo
+    return {
+      title: this.data.productName,
+      path: '/pages/play/index?id=' + this.data.id + '&categoryCode=' + this.data.categoryCode,
+      imageUrl: this.data.preImage
+    }
   },
 
   onLoadData(){
